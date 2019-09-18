@@ -31,7 +31,7 @@ class GANImages(Dataset):
         target_image = Image.open(self.images_filename[idx]).convert('RGB')
         return self.transform(target_image)
 
-def get_weighted_mask(mask,window_size):
+def get_weighted_mask(mask, window_size):
     assert len(mask.shape) == 3
     assert window_size % 2 == 1 # odd window size
     max_shift = window_size//2
@@ -50,18 +50,24 @@ class RandomPatchDataset(Dataset):
         self.image_size = image_size
         self.weighted_mask = weighted_mask
         self.window_size = window_size
+        self.transform = transforms.Compose([
+            transforms.ColorJitter(0, 0, 0.2, 0.05),
+            transforms.RandomHorizontalFlip(),
+            transforms.Resize(image_size),
+            transforms.RandomCrop(image_size),
+            transforms.ToTensor(),
+            transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
+        ])
 
     def __len__(self):
         return len(self.images_filename)
 
     def __getitem__(self, idx):
-        original_image = np.float64(io.imread(self.images_filename[idx]))
-        original_image = transform.resize(original_image, self.image_size)
-        original_image = original_image.reshape((3,)+self.image_size)
-        original_image = (original_image-np.mean(original_image))/np.max(np.abs(original_image))
+        original_image = Image.open(self.images_filename[idx]).convert('RGB')
+        original_image = self.transform(target_image)
 
         # Patch
-        mask = np.ones(self.image_size,dtype=np.float32)
+        mask = np.ones(self.image_size, dtype=np.float32)
         x = np.random.randint(self.image_size[0]//6,5*self.image_size[0]//6)
         y = np.random.randint(self.image_size[1]//6,5*self.image_size[1]//6)
         h = np.random.randint(self.image_size[0]//4,self.image_size[0]//2)
