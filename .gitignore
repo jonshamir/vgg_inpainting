@@ -1,7 +1,6 @@
-data/*
-test_images/*
 model/__pycache__/*
 *.vim
 *.vim !
 *.pth
 *.png
+.DS_Store
