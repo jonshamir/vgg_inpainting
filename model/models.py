@@ -6,7 +6,7 @@ class Generator(nn.Module):
     def __init__(self, args):
         super(Generator, self).__init__()
 
-        self.init_size = args.img_size // 4
+        self.init_size = args.image_size // 4
         self.linear_layer = nn.Sequential(nn.Linear(args.latent_dim, 128 * self.init_size ** 2))
 
         self.conv_layers = nn.Sequential(
@@ -47,7 +47,7 @@ class Discriminator(nn.Module):
             *discriminator_block(64, 128),
         )
 
-        self.ds_size = args.img_size // 2 ** 4
+        self.ds_size = args.image_size // 2 ** 4
         self.adverse_layer = nn.Sequential(nn.Linear(128 * self.ds_size ** 2, 1), nn.Sigmoid())
 
     def forward(self, image):
