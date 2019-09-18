@@ -57,7 +57,7 @@ class RandomPatchDataset(Dataset):
     def __getitem__(self, idx):
         original_image = np.float64(io.imread(self.images_filename[idx]))
         original_image = transform.resize(original_image, self.image_size)
-        original_image = original_image.reshape((1,)+self.image_size)
+        original_image = original_image.reshape((3,)+self.image_size)
         original_image = (original_image-np.mean(original_image))/np.max(np.abs(original_image))
 
         # Patch
