@@ -95,7 +95,7 @@ def train(args):
             optimizer_D.step()
 
             if epoch % args.sample_interval == 0 and i % (len(dataloader)/5) == 0:
-                save_image(gen_imgs.data[0,0], "../samples/{}_{}.png".format(str(epoch).zfill(len(str(args.epochs))),
+                save_image(gen_imgs.data[0], "../samples/{}_{}.png".format(str(epoch).zfill(len(str(args.epochs))),
                                                                          str(i).zfill(len(str(len(dataloader))))), normalize=True)
 
         print(

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f192069d-9cca-41ce-8b91-d60babadc125" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/model/datasets.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/datasets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/train_gan.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/train_gan.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,16 +29,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model/train_gan.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="499">
-              <caret line="97" column="58" selection-start-line="97" selection-start-column="58" selection-end-line="97" selection-end-column="58" />
+            <state relative-caret-position="436">
+              <caret line="97" column="42" selection-start-line="97" selection-start-column="42" selection-end-line="97" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/datasets.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="394">
@@ -53,8 +53,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1104">
-              <caret line="48" selection-start-line="48" selection-end-line="48" />
+            <state relative-caret-position="851">
+              <caret line="37" column="47" selection-start-line="37" selection-start-column="47" selection-end-line="37" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -82,6 +82,7 @@
       <find>img_size</find>
       <find>rand</find>
       <find>rando</find>
+      <find>checkpoints</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -93,8 +94,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/model/models.py" />
         <option value="$PROJECT_DIR$/images/test.txt" />
-        <option value="$PROJECT_DIR$/model/train_gan.py" />
         <option value="$PROJECT_DIR$/model/datasets.py" />
+        <option value="$PROJECT_DIR$/model/train_gan.py" />
       </list>
     </option>
   </component>
@@ -117,6 +118,22 @@
             <path>
               <item name="vgg_inpainting" type="b2602c69:ProjectViewProjectNode" />
               <item name="vgg_inpainting" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vgg_inpainting" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vgg_inpainting" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vgg_inpainting" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vgg_inpainting" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="checkpoints" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vgg_inpainting" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vgg_inpainting" type="462c0819:PsiDirectoryNode" />
+              <item name="samples" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -173,12 +190,12 @@
       <workItem from="1568117285313" duration="141000" />
       <workItem from="1568186969677" duration="70000" />
       <workItem from="1568187055953" duration="1405000" />
-      <workItem from="1568797762040" duration="2113000" />
+      <workItem from="1568797762040" duration="2357000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3729000" />
+    <option name="totallyTimeSpent" value="3973000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="9" y="23" width="1416" height="843" extended-state="0" />
@@ -231,24 +248,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1104">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/samples/test.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="2" selection-start-column="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/train_gan.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="97" column="58" selection-start-line="97" selection-start-column="58" selection-end-line="97" selection-end-column="58" />
         </state>
       </provider>
     </entry>
@@ -259,6 +262,20 @@
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="851">
+          <caret line="37" column="47" selection-start-line="37" selection-start-column="47" selection-end-line="37" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/train_gan.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="97" column="42" selection-start-line="97" selection-start-column="42" selection-end-line="97" selection-end-column="42" />
         </state>
       </provider>
     </entry>
