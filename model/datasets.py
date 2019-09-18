@@ -64,7 +64,7 @@ class RandomPatchDataset(Dataset):
 
     def __getitem__(self, idx):
         original_image = Image.open(self.images_filename[idx]).convert('RGB')
-        original_image = self.transform(target_image)
+        original_image = self.transform(original_image)
 
         # Patch
         mask = np.ones(self.image_size, dtype=np.float32)
