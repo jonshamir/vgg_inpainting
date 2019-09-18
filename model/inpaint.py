@@ -47,7 +47,7 @@ def image_gradient(image):
     G_y = F.conv2d(image, b, padding=1)
     return G_x, G_y
 
-def posisson_blending(masks,generated_images,corrupted_images):
+def poisson_blending(masks, generated_images, corrupted_images):
     print("Starting Poisson blending ...")
     initial_guess = masks*corrupted_images + (1-masks)*generated_images
     image_optimum = nn.Parameter(torch.FloatTensor(initial_guess.detach().cpu().numpy()).cuda())
@@ -94,11 +94,10 @@ def inpaint(args):
             inpaint_loss = c_loss + args.prior_weight*prior_loss
             inpaint_loss.backward()
             optimizer_inpaint.step()
-            print("[Epoch: {}/{}] \t[Loss: \t[Context: {:.3f}] \t[Prior: {:.3f}] \t[Inpaint: {:.3f}]]  \r".format(1+epoch, args.optim_steps, c_loss, 
-                                                                               prior_loss, inpaint_loss),end="")
+            print("[Epoch: {}/{}] \t[Loss: \t[Context: {:.3f}] \t[Prior: {:.3f}] \t[Inpaint: {:.3f}]]  \r".format(1+epoch, args.optim_steps, c_loss, prior_loss, inpaint_loss), end="")
         print("")
 
-        blended_images = posisson_blending(masks, generated_images.detach(), corrupted_images)
+        blended_images = poisson_blending(masks, generated_images.detach(), corrupted_images)
     
         image_range = torch.min(corrupted_images), torch.max(corrupted_images)
         save_image(corrupted_images, "../outputs/corrupted_{}.png".format(i), normalize=True, range=image_range, nrow=5)
