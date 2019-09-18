@@ -14,6 +14,7 @@ class GANImages(Dataset):
     def __init__(self, directory, image_size=(64,64)):
         self.directory = directory
         self.images_filename = glob.glob(os.path.join(directory, "*.png"))
+        print(self.images_filename)
         self.image_size = image_size
         self.transform = transforms.Compose([
             transforms.ColorJitter(0, 0, 0.2, 0.05),
