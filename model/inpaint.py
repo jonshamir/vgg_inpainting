@@ -24,8 +24,8 @@ def get_arguments():
     parser.add_argument("--test-only", action='store_true', default=False)
 
     parser.add_argument("--latent-dim", type=int, default=100)
-    parser.add_argument("--img-size", type=int, default=96)
-    parser.add_argument("--channels", type=int, default=1)
+    parser.add_argument("--image_size", type=int, default=64)
+    parser.add_argument("--channels", type=int, default=3)
     parser.add_argument("--optim-steps", type=int, default=1500)
     parser.add_argument("--blending-steps", type=int, default=3000)
     parser.add_argument("--prior-weight", type=float, default=0.003)
