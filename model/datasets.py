@@ -9,7 +9,7 @@ import glob
 import os
 
 class GANImages(Dataset):
-    def __init__(self, directory, image_size=(96,96)):
+    def __init__(self, directory, image_size=(64,64)):
         self.directory = directory
         self.images_filename = glob.glob(os.path.join(directory, "*.png"))
         self.image_size = image_size
@@ -20,7 +20,7 @@ class GANImages(Dataset):
     def __getitem__(self, idx):
         target_image = np.float64(io.imread(self.images_filename[idx]))
         target_image = transform.resize(target_image, self.image_size)
-        target_image = target_image.reshape((1,)+self.image_size)
+        # target_image = target_image.reshape((1,)+self.image_size)
         target_image = (target_image-np.mean(target_image))/np.max(np.abs(target_image))
         return torch.FloatTensor(target_image)
 
@@ -37,7 +37,7 @@ def get_weighted_mask(mask,window_size):
     return output*mask
 
 class RandomPatchDataset(Dataset):
-    def __init__(self, directory, image_size=(96,96), weighted_mask=True, window_size=7):
+    def __init__(self, directory, image_size=(64,64), weighted_mask=True, window_size=7):
         self.directory = directory
         self.images_filename = glob.glob(os.path.join(directory, "*.png"))
         self.image_size = image_size

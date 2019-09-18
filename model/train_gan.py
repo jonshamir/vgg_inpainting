@@ -23,7 +23,7 @@ def get_arguments():
     parser.add_argument("--train-data-dir", type=str, default="../data/")
 
     parser.add_argument("--latent-dim", type=int, default=100)
-    parser.add_argument("--img-size", type=int, default=96)
+    parser.add_argument("--image_size", type=int, default=96)
     parser.add_argument("--channels", type=int, default=1)
     parser.add_argument("--d-steps", type=int, default=1)
     parser.add_argument("--sample-interval", type=int, default=1)
