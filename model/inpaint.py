@@ -108,7 +108,8 @@ def inpaint(args):
             inpaint_loss = c_loss + args.prior_weight*prior_loss
             inpaint_loss.backward()
             optimizer_inpaint.step()
-            print("[Epoch: {}/{}] \t[Loss: \t[Context: {:.3f}] \t[Prior: {:.3f}] \t[Inpaint: {:.3f}]]  \r".format(1+epoch, args.optim_steps, c_loss, prior_loss, inpaint_loss), end="")
+            print("[Epoch: {}/{}] \t[Loss: \t[Context: {:.3f}] \t[Prior: {:.3f}] \t[Inpaint: {:.3f}]]  \r".format(1+epoch, args.optim_steps, c_loss,
+                  , inpaint_loss), end="")
         print("")
 
         blended_images = poisson_blending(masks, generated_images.detach(), corrupted_images)

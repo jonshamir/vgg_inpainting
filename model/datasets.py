@@ -76,7 +76,7 @@ class RandomPatchDataset(Dataset):
         target_image = original_image.numpy()
         target_image[0][1-mask > 0.5] = np.max(target_image)
 
-        mask = mask.reshape((1,)+mask.shape)
+        mask = mask.reshape((3,)+mask.shape)
 
         # Weighted Mask
         if self.weighted_mask: 
