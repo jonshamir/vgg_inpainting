@@ -70,17 +70,17 @@ def poisson_blending(masks, generated_images, corrupted_images):
 
     for epoch in range(args.blending_steps):
         optimizer_blending.zero_grad()
-        image_optimum_grad_x, image_optimum_grad_y = image_gradient(image_optimum);
+        image_optimum_grad_x, image_optimum_grad_y = image_gradient(image_optimum)
         blending_loss = torch.sum(((generated_grad_x-image_optimum_grad_x)**2 + (generated_grad_y-image_optimum_grad_y)**2)*(1-masks))
         blending_loss.backward()
         image_optimum.grad = image_optimum.grad*(1-masks)
         optimizer_blending.step()
 
-        print("[Epoch: {}/{}] \t[Blending loss: {:.3f}]   \r".format(1+epoch, args.blending_steps, blending_loss), end="") 
+        print("[Epoch: {}/{}] \t[Blending loss: {:.3f}]   \r".format(1+epoch, args.blending_steps, blending_loss), end="")
     print("")
 
     del optimizer_blending
-    return image_optimum.detach()
+    return initial_guess.detach()
 
 def inpaint(args):
     dataset = datasets.RandomPatchDataset(args.test_data_dir,weighted_mask=True, window_size=args.window_size)
