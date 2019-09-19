@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f192069d-9cca-41ce-8b91-d60babadc125" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/model/inpaint.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/inpaint.py" afterDir="false" />
-    </list>
+    <list default="true" id="f192069d-9cca-41ce-8b91-d60babadc125" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,8 +60,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model/inpaint.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="96" column="176" selection-start-line="96" selection-start-column="176" selection-end-line="96" selection-end-column="176" />
+            <state relative-caret-position="289">
+              <caret line="51" column="71" selection-start-line="51" selection-start-column="71" selection-end-line="51" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -79,6 +77,8 @@
       <find>rando</find>
       <find>checkpoints</find>
       <find>check</find>
+      <find>chann</find>
+      <find>posisson_blending</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -187,23 +187,22 @@
       <workItem from="1568117285313" duration="141000" />
       <workItem from="1568186969677" duration="70000" />
       <workItem from="1568187055953" duration="1405000" />
-      <workItem from="1568797762040" duration="3968000" />
+      <workItem from="1568797762040" duration="5002000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5584000" />
+    <option name="totallyTimeSpent" value="6618000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="9" y="23" width="1416" height="843" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14919941" />
       <window_info id="Structure" order="1" show_stripe_button="false" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" show_stripe_button="false" side_tool="true" />
       <window_info id="Remote Host" order="3" sideWeight="0.8074074" weight="0.32969433" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3288948" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.2509554" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -215,7 +214,7 @@
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4992636" weight="0.32866243" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5014728" side_tool="true" weight="0.28993288" />
-      <window_info anchor="bottom" id="Python Console" order="13" sideWeight="0.49852726" visible="true" weight="0.03994674" />
+      <window_info anchor="bottom" id="Python Console" order="13" sideWeight="0.49852726" weight="0.03994674" />
       <window_info anchor="right" x="0" y="0" width="300" height="637" id="Documentation" order="0" sideWeight="0.19259259" side_tool="true" weight="0.3298969" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -275,8 +274,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/inpaint.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="96" column="176" selection-start-line="96" selection-start-column="176" selection-end-line="96" selection-end-column="176" />
+        <state relative-caret-position="289">
+          <caret line="51" column="71" selection-start-line="51" selection-start-column="71" selection-end-line="51" selection-end-column="71" />
         </state>
       </provider>
     </entry>
