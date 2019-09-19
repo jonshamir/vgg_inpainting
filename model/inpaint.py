@@ -76,7 +76,8 @@ def poisson_blending(masks, generated_images, corrupted_images):
         image_optimum.grad = image_optimum.grad*(1-masks)
         optimizer_blending.step()
 
-        print("[Epoch: {}/{}] \t[Blending loss: {:.3f}]   \r".format(1+epoch, args.blending_steps, blending_loss))
+        if epoch % 500 == 0:
+            print("[Epoch: {}/{}] \t[Blending loss: {:.3f}]   \r".format(1+epoch, args.blending_steps, blending_loss))
     print("")
 
     del optimizer_blending
@@ -108,7 +109,8 @@ def inpaint(args):
             inpaint_loss = c_loss + args.prior_weight*prior_loss
             inpaint_loss.backward()
             optimizer_inpaint.step()
-            print("[Epoch: {}/{}] \t[Loss: \t[Context: {:.3f}] \t[Prior: {:.3f}] \t[Inpaint: {:.3f}]]  \r".format(1+epoch, args.optim_steps, c_loss, prior_loss, inpaint_loss))
+            if epoch % 500 == 0:
+                print("[Epoch: {}/{}] \t[Loss: \t[Context: {:.3f}] \t[Prior: {:.3f}] \t[Inpaint: {:.3f}]]  \r".format(1+epoch, args.optim_steps, c_loss, prior_loss, inpaint_loss))
         print("")
 
         blended_images = poisson_blending(masks, generated_images.detach(), corrupted_images)
