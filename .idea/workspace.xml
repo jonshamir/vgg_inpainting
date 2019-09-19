@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f192069d-9cca-41ce-8b91-d60babadc125" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/model/inpaint.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/inpaint.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/datasets.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/datasets.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model/datasets.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="75" column="45" lean-forward="true" selection-start-line="75" selection-start-column="45" selection-end-line="75" selection-end-column="45" />
+            <state relative-caret-position="358">
+              <caret line="76" column="22" selection-start-line="76" selection-start-column="22" selection-end-line="76" selection-end-column="22" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -51,19 +51,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model/inpaint.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="79" column="12" selection-start-line="79" selection-start-column="12" selection-end-line="79" selection-end-column="12" />
+            <state relative-caret-position="18">
+              <caret line="96" column="52" selection-start-line="96" selection-start-column="47" selection-end-line="96" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -78,12 +69,12 @@
       <find>rand</find>
       <find>rando</find>
       <find>checkpoints</find>
-      <find>check</find>
       <find>chann</find>
       <find>posisson_blending</find>
       <find>image_gradient</find>
       <find>end=</find>
       <find>print</find>
+      <find>check</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -96,8 +87,8 @@
         <option value="$PROJECT_DIR$/model/models.py" />
         <option value="$PROJECT_DIR$/images/test.txt" />
         <option value="$PROJECT_DIR$/model/train_gan.py" />
-        <option value="$PROJECT_DIR$/model/datasets.py" />
         <option value="$PROJECT_DIR$/model/inpaint.py" />
+        <option value="$PROJECT_DIR$/model/datasets.py" />
       </list>
     </option>
   </component>
@@ -186,12 +177,12 @@
       <workItem from="1568117285313" duration="141000" />
       <workItem from="1568186969677" duration="70000" />
       <workItem from="1568187055953" duration="1405000" />
-      <workItem from="1568797762040" duration="6796000" />
+      <workItem from="1568797762040" duration="6950000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8412000" />
+    <option name="totallyTimeSpent" value="8566000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="9" y="23" width="1416" height="843" extended-state="0" />
@@ -262,20 +253,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/datasets.py">
+    <entry file="file://$PROJECT_DIR$/model/inpaint.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="75" column="45" lean-forward="true" selection-start-line="75" selection-start-column="45" selection-end-line="75" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="18">
+          <caret line="96" column="52" selection-start-line="96" selection-start-column="47" selection-end-line="96" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/inpaint.py">
+    <entry file="file://$PROJECT_DIR$/model/datasets.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="79" column="12" selection-start-line="79" selection-start-column="12" selection-end-line="79" selection-end-column="12" />
+        <state relative-caret-position="358">
+          <caret line="76" column="22" selection-start-line="76" selection-start-column="22" selection-end-line="76" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
