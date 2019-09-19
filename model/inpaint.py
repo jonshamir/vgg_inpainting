@@ -39,11 +39,25 @@ def context_loss(corrupted_images, generated_images, masks, weighted=True):
 def image_gradient(image):
     a = torch.Tensor([[[[1, 0, -1],
                         [2, 0, -2],
-                        [1, 0, -1]]]]).cuda()
+                        [1, 0, -1]],
+                       [[1, 0, -1],
+                        [2, 0, -2],
+                        [1, 0, -1]],
+                       [[1, 0, -1],
+                        [2, 0, -2],
+                        [1, 0, -1]]
+                       ]]).cuda()
     G_x = F.conv2d(image, a, padding=1)
-    b = torch.Tensor([[[[1, 2, 1],
+    b = torch.Tensor([[[[ 1, 2, 1],
+                        [ 0, 0, 0],
+                        [-1,-2,-1]],
+                       [[1, 2, 1],
                         [0, 0, 0],
-                        [-1, -2, -1]]]]).cuda()
+                        [-1,-2,-1]],
+                       [[1, 2, 1],
+                        [0, 0, 0],
+                        [-1,-2,-1]]
+                       ]]).cuda()
     G_y = F.conv2d(image, b, padding=1)
     return G_x, G_y
 
