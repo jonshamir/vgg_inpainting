@@ -17,7 +17,7 @@ import datasets
 
 def get_arguments():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--batch-size", type=int, default=20)
+    parser.add_argument("--batch-size", type=int, default=24)
     parser.add_argument("--gan-path", type=str, default="./checkpoints/model.pth")
     parser.add_argument("--test-data-dir", type=str, default="../test_images/")
     parser.add_argument("--eval-only", action='store_true', default=False)
