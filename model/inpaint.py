@@ -18,7 +18,7 @@ import datasets
 def get_arguments():
     parser = argparse.ArgumentParser()
     parser.add_argument("--batch-size", type=int, default=25)
-    parser.add_argument("--gan-path", type=str, default="./checkpoints/model.pth")
+    parser.add_argument("--gan-path", type=str, default="./checkpoints/")
     parser.add_argument("--test-data-dir", type=str, default="../test_images/")
     parser.add_argument("--eval-only", action='store_true', default=False)
     parser.add_argument("--test-only", action='store_true', default=False)
@@ -33,7 +33,7 @@ def get_arguments():
     args = parser.parse_args()
     return args
 
-def context_loss(corrupted_images, generated_images, masks, weighted=True):
+def calc_context_loss(corrupted_images, generated_images, masks, weighted=True):
     return torch.sum(((corrupted_images-generated_images)**2)*masks)
 
 def image_gradient(image):
@@ -61,59 +61,38 @@ def image_gradient(image):
     G_y = F.conv2d(image, b, padding=1)
     return G_x, G_y
 
-def poisson_blending(masks, generated_images, corrupted_images):
-    print("Starting Poisson blending ...")
-    initial_guess = masks*corrupted_images + (1-masks)*generated_images
-    image_optimum = nn.Parameter(torch.FloatTensor(initial_guess.detach().cpu().numpy()).cuda())
-    optimizer_blending = optim.Adam([image_optimum])
-    generated_grad_x, generated_grad_y = image_gradient(generated_images)
-
-    for epoch in range(args.blending_steps):
-        optimizer_blending.zero_grad()
-        image_optimum_grad_x, image_optimum_grad_y = image_gradient(image_optimum)
-        blending_loss = torch.sum(((generated_grad_x-image_optimum_grad_x)**2 + (generated_grad_y-image_optimum_grad_y)**2)*(1-masks))
-        blending_loss.backward()
-        image_optimum.grad = image_optimum.grad*(1-masks)
-        optimizer_blending.step()
-
-        if epoch % 500 == 0:
-            print("[Epoch: {}/{}] \t[Blending loss: {:.3f}]   \r".format(1+epoch, args.blending_steps, blending_loss))
-    print("")
-
-    del optimizer_blending
-    return initial_guess.detach()
-
 def inpaint(args):
-    dataset = datasets.RandomPatchDataset(args.test_data_dir,weighted_mask=True, window_size=args.window_size)
+    dataset = datasets.RandomPatchDataset(args.test_data_dir, image_size=(args.image_size, args.image_size), weighted_mask=True, window_size=args.window_size)
     dataloader = DataLoader(dataset, batch_size=args.batch_size)
 
     # Loading trained GAN model
-    saved_gan = torch.load(args.gan_path)
-    generator = models.Generator(args).cuda()
-    discriminator = models.Discriminator(args).cuda()
-    generator.load_state_dict(saved_gan["state_dict_G"])
-    discriminator.load_state_dict(saved_gan["state_dict_D"])
+    saved_G = torch.load(args.gan_path + "modelG.pth")
+    saved_D = torch.load(args.gan_path + "modelD.pth")
+    netG = models.BasicGenerator().cuda()
+    netD = models.BasicDiscriminator().cuda()
+    netG.load_state_dict(saved_G)
+    netD.load_state_dict(saved_D)
 
     for i, (corrupted_images, original_images, masks, weighted_masks) in enumerate(dataloader):
         corrupted_images, masks, weighted_masks = corrupted_images.cuda(), masks.cuda(), weighted_masks.cuda()
         z_optimum = nn.Parameter(torch.FloatTensor(np.random.normal(0, 1, (corrupted_images.shape[0],args.latent_dim,))).cuda())
         optimizer_inpaint = optim.Adam([z_optimum])
 
-        print("Starting backprop to input ...")
+        print("Training input noise...")
         for epoch in range(args.optim_steps):
             optimizer_inpaint.zero_grad()
-            generated_images = generator(z_optimum)
-            discriminator_opinion = discriminator(generated_images)
-            c_loss = context_loss(corrupted_images, generated_images, weighted_masks)
-            prior_loss = torch.sum(-torch.log(discriminator_opinion))
-            inpaint_loss = c_loss + args.prior_weight*prior_loss
+            generated_images = netG(z_optimum)
+            D_loss = netD(generated_images)
+            context_loss = calc_context_loss(corrupted_images, generated_images, weighted_masks)
+            prior_loss = torch.sum(-torch.log(D_loss))
+            inpaint_loss = context_loss + args.prior_weight * prior_loss
             inpaint_loss.backward()
             optimizer_inpaint.step()
             if epoch % 500 == 0:
-                print("[Epoch: {}/{}] \t[Loss: \t[Context: {:.3f}] \t[Prior: {:.3f}] \t[Inpaint: {:.3f}]]  \r".format(1+epoch, args.optim_steps, c_loss, prior_loss, inpaint_loss))
+                print("[Epoch: {}/{}] \t[Loss: \t[Context: {:.3f}] \t[Prior: {:.3f}] \t[Inpaint: {:.3f}]]  \r".format(1+epoch, args.optim_steps, context_loss, prior_loss, inpaint_loss))
         print("")
 
-        blended_images = poisson_blending(masks, generated_images.detach(), corrupted_images)
+        blended_images = masks * corrupted_images + (1 - masks) * generated_images.detach()
     
         image_range = torch.min(corrupted_images), torch.max(corrupted_images)
         save_image(corrupted_images, "../outputs/corrupted_{}.png".format(i), normalize=True, range=image_range, nrow=5)

@@ -36,12 +36,12 @@ def get_weighted_mask(mask, window_size):
     assert window_size % 2 == 1 # odd window size
     max_shift = window_size//2
     output = np.zeros_like(mask)
-    for i in range(-max_shift,max_shift+1):
-        for j in range(-max_shift,max_shift+1):
+    for i in range(-max_shift, max_shift+1):
+        for j in range(-max_shift, max_shift+1):
             if i != 0 or j != 0:
                 output += np.roll(mask, (i,j), axis=(1,2))
-    output = 1 - output/(window_size**2-1)
-    return output*mask
+    output = 1 - output / (window_size**2-1)
+    return output * mask
 
 class RandomPatchDataset(Dataset):
     def __init__(self, directory, image_size=(64,64), weighted_mask=True, window_size=7):
@@ -73,7 +73,7 @@ class RandomPatchDataset(Dataset):
         h = np.random.randint(self.image_size[0]//4,self.image_size[0]//2)
         w = np.random.randint(self.image_size[1]//4,self.image_size[1]//2)
         mask[max(0,x-h//2):min(self.image_size[0],x+h//2),max(0,y-w//2):min(self.image_size[1],y+w//2)] = 0
-        target_image = original_image.numpy()
+        target_image = original_image.numpy().copy()
         target_image[:, 1-mask > 0.5] = np.max(target_image)
 
         mask = mask.reshape((1,)+mask.shape)
