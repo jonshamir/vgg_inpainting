@@ -43,18 +43,18 @@ def get_weighted_mask(mask, window_size):
     output = 1 - output / (window_size**2-1)
     return output * mask
 
-class RandomPatchDataset(Dataset):
+class CorruptedPatchDataset(Dataset):
     def __init__(self, directory, image_size=(64,64), weighted_mask=True, window_size=7):
         self.directory = directory
-        self.images_filename = glob.glob(os.path.join(directory, "*.png"))
+        self.images_filename = glob.glob(os.path.join(directory, "*.png")) + glob.glob(os.path.join(directory, "*.jpg"))
         self.image_size = image_size
         self.weighted_mask = weighted_mask
         self.window_size = window_size
         self.transform = transforms.Compose([
             transforms.ColorJitter(0, 0, 0.2, 0.05),
             transforms.RandomHorizontalFlip(),
-            transforms.Resize(image_size),
             transforms.RandomCrop(image_size),
+            transforms.Resize(image_size),
             transforms.ToTensor(),
             transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
         ])
