@@ -2,255 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f192069d-9cca-41ce-8b91-d60babadc125" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/datasets.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/datasets.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/inpaint.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/inpaint.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7551.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7552.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7553.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7554.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7555.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7556.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7557.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7558.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7559.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7560.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7561.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7562.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7563.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7564.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7565.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7566.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7567.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7568.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7569.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7570.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7571.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7572.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7573.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7574.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7575.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7576.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7577.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7578.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7579.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7580.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7581.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7582.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7583.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7584.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7585.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7586.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7587.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7588.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7589.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7590.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7591.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7592.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7593.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7594.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7595.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7596.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7597.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7598.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7599.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7600.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7601.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7602.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7603.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7604.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7605.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7606.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7607.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7608.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7609.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7610.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7611.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7612.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7613.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7614.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7615.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7616.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7617.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7618.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7619.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7620.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7621.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7622.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7623.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7624.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7625.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7626.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7627.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7628.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7629.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7630.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7631.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7632.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7633.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7634.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7635.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7636.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7637.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7638.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7639.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7640.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7641.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7642.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7643.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7644.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7645.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7646.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7647.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7648.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7649.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7650.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7651.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7652.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7653.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7654.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7655.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7656.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7657.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7658.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7659.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7660.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7661.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7662.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7663.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7664.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7665.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7666.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7667.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7668.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7669.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7670.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7671.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7672.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7673.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7674.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7675.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7676.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7677.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7678.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7679.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7680.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7681.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7682.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7683.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7684.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7685.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7686.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7687.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7688.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7689.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7690.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7691.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7692.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7693.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7694.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7695.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7696.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7697.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7698.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7699.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7700.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7701.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7702.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7703.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7704.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7705.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7706.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7707.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7708.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7709.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7710.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7711.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7712.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7713.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7714.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7715.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7716.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7717.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7718.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7719.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7720.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7721.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7722.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7723.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7724.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7725.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7726.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7727.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7728.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7729.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7730.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7731.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7732.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7733.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7734.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7735.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7736.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7737.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7738.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7739.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7740.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7741.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7742.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7743.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7744.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7745.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7746.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7747.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7748.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7749.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7750.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7751.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7752.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7753.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7754.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7755.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7756.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7757.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7758.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7759.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7760.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7761.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7762.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7763.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7764.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7765.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7766.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7767.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7768.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7769.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7770.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7771.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7772.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7773.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7774.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7775.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7776.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7777.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7778.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7779.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7780.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7781.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7782.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7783.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7784.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7785.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7786.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7787.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7788.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7789.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7790.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7791.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7792.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7793.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7794.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7795.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_images/frog-7796.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/models_big.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/models_big.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -277,11 +30,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/datasets.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="56" column="42" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="42" />
+            <state relative-caret-position="442">
+              <caret line="68" column="15" selection-start-line="68" selection-start-column="15" selection-end-line="68" selection-end-column="15" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/model/inpaint_vgg.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="431">
+              <caret line="66" column="50" selection-start-line="66" selection-start-column="50" selection-end-line="66" selection-end-column="50" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -290,22 +55,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/inpaint.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="54" column="37" lean-forward="true" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
-              <folding>
-                <element signature="e#1#13#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/models_big.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1298">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="560">
+              <caret line="154" column="38" lean-forward="true" selection-start-line="154" selection-start-column="38" selection-end-line="154" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -314,13 +70,11 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>channels</find>
       <find>chan</find>
       <find>img_size</find>
       <find>rand</find>
       <find>rando</find>
       <find>checkpoints</find>
-      <find>chann</find>
       <find>posisson_blending</find>
       <find>end=</find>
       <find>print</find>
@@ -339,6 +93,9 @@
       <find>store_true</find>
       <find>window_size</find>
       <find>test_data_dir</find>
+      <find>channels</find>
+      <find>chann</find>
+      <find>args</find>
     </findStrings>
     <replaceStrings>
       <replace>.to(device)</replace>
@@ -354,10 +111,10 @@
         <option value="$PROJECT_DIR$/images/test.txt" />
         <option value="$PROJECT_DIR$/model/train_gan.py" />
         <option value="$PROJECT_DIR$/model/models.py" />
+        <option value="$PROJECT_DIR$/model/datasets.py" />
+        <option value="$PROJECT_DIR$/model/inpaint.py" />
         <option value="$PROJECT_DIR$/model/models_big.py" />
         <option value="$PROJECT_DIR$/model/inpaint_vgg.py" />
-        <option value="$PROJECT_DIR$/model/inpaint.py" />
-        <option value="$PROJECT_DIR$/model/datasets.py" />
       </list>
     </option>
   </component>
@@ -459,12 +216,12 @@
       <workItem from="1568187055953" duration="1405000" />
       <workItem from="1568797762040" duration="9073000" />
       <workItem from="1569160673133" duration="386000" />
-      <workItem from="1569310802009" duration="10684000" />
+      <workItem from="1569310802009" duration="13325000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21759000" />
+    <option name="totallyTimeSpent" value="24400000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="9" y="23" width="1319" height="843" extended-state="0" />
@@ -528,13 +285,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/models_big.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1298">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
@@ -542,20 +292,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/inpaint_vgg.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="47" column="10" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/inpaint.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="54" column="37" lean-forward="true" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
+        <state relative-caret-position="652">
+          <caret line="64" column="12" selection-start-line="64" selection-start-column="12" selection-end-line="64" selection-end-column="12" />
           <folding>
             <element signature="e#1#13#0" expanded="true" />
           </folding>
@@ -564,8 +304,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/datasets.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="56" column="42" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="42" />
+        <state relative-caret-position="442">
+          <caret line="68" column="15" selection-start-line="68" selection-start-column="15" selection-end-line="68" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/models_big.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="154" column="38" lean-forward="true" selection-start-line="154" selection-start-column="38" selection-end-line="154" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/inpaint_vgg.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="66" column="50" selection-start-line="66" selection-start-column="50" selection-end-line="66" selection-end-column="50" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
