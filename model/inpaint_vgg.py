@@ -27,7 +27,7 @@ def get_arguments():
     parser.add_argument("--image_size", type=int, default=64)
     parser.add_argument("--channels", type=int, default=3)
     parser.add_argument("--optim_steps", type=int, default=8000)
-    parser.add_argument("--prior_weight", type=float, default=0.001)
+    parser.add_argument("--prior_weight", type=float, default=100)
     parser.add_argument("--window_size", type=int, default=25)
     args = parser.parse_args()
     return args
@@ -70,7 +70,7 @@ def inpaint(opt):
             inpaint_loss.backward()
             inpaint_opt.step()
             if epoch % 500 == 0:
-                print("Epoch: {}/{}\tLoss: {:.3f}\tContext loss: {:.3f}\tPrior loss: {:.3f}\r".format(1 + epoch, opt.optim_steps, context_loss, prior_loss, inpaint_loss))
+                print("Epoch: {}/{}\tLoss: {:.3f}\tContext loss: {:.3f}\tPrior loss: {:.3f}\r".format(1 + epoch, opt.optim_steps, inpaint_loss, context_loss, prior_loss))
         print("")
 
         blended_images = masks * corrupted_images + (1 - masks) * gen_images.detach()
