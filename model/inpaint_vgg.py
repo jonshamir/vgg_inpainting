@@ -42,8 +42,8 @@ def inpaint(opt):
     dataloader = DataLoader(dataset, batch_size=opt.batch_size)
 
     # Loading trained GAN model
-    saved_G = torch.load(opt.gan_path + opt.pretrained_model + "/modelD.pth")
-    saved_D = torch.load(opt.gan_path + opt.pretrained_model + "/modelG.pth")
+    saved_G = torch.load(opt.gan_path + opt.pretrained_model + "/modelG.pth")
+    saved_D = torch.load(opt.gan_path + opt.pretrained_model + "/modelD.pth")
     saved_Inv = torch.load(opt.gan_path + opt.pretrained_model + "/modelInv.pth")
     netG = models.DeepGenerator().to(device)
     netD = models.DeepDiscriminator(vgg_layer=5, ndf=512).to(device)
