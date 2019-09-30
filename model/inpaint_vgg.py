@@ -46,7 +46,7 @@ def inpaint(opt):
     saved_D = torch.load(opt.gan_path + opt.pretrained_model + "/modelG.pth")
     saved_Inv = torch.load(opt.gan_path + opt.pretrained_model + "/modelInv.pth")
     netG = models.DeepGenerator(opt.latent_dim).to(device)
-    netD = models.StudentDiscriminator().to(device)
+    netD = models.DeepDiscriminator().to(device)
     netInv = models.VGGInverterG().to(device)
     netG.load_state_dict(saved_G, strict=False)
     netD.load_state_dict(saved_D, strict=False)
