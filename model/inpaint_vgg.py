@@ -17,9 +17,7 @@ def get_arguments():
     parser = argparse.ArgumentParser()
     parser.add_argument("--batch_size", type=int, default=25)
     parser.add_argument("--gan_path", type=str, default="./checkpoints/")
-    parser.add_argument("--d_path", type=str, default="modelD")
-    parser.add_argument("--g_path", type=str, default="modelG")
-    parser.add_argument("--inv_path", type=str, default="modelInv")
+    parser.add_argument("--dataset", type=str, default="frogs")
     parser.add_argument("--test_data_dir", type=str, default="../test_images/")
     parser.add_argument("--eval_only", action='store_true', default=False)
     parser.add_argument("--test_only", action='store_true', default=False)
@@ -38,13 +36,14 @@ def calc_context_loss(corrupt, generated, masks):
     # return torch.sum(torch.abs((corrupt - generated) * masks))
 
 def inpaint(opt):
-    dataset = datasets.CorruptedPatchDataset(opt.test_data_dir, image_size=(opt.image_size, opt.image_size), weighted_mask=True, window_size=opt.window_size)
+    data_path = opt.test_data_dir + opt.dataset + '/'
+    dataset = datasets.CorruptedPatchDataset(data_path, image_size=(opt.image_size, opt.image_size), weighted_mask=True, window_size=opt.window_size)
     dataloader = DataLoader(dataset, batch_size=opt.batch_size)
 
     # Loading trained GAN model
-    saved_G = torch.load(opt.gan_path + opt.g_path + ".pth")
-    saved_D = torch.load(opt.gan_path + opt.d_path + ".pth")
-    saved_Inv = torch.load(opt.gan_path + opt.inv_path + ".pth")
+    saved_G = torch.load(opt.gan_path + opt.dataset + "/modelD.pth")
+    saved_D = torch.load(opt.gan_path + opt.dataset + "/modelG.pth")
+    saved_Inv = torch.load(opt.gan_path + opt.dataset + "/modelInv.pth")
     netG = models.DeepGenerator(opt.latent_dim).to(device)
     netD = models.StudentDiscriminator().to(device)
     netInv = models.VGGInverterG().to(device)

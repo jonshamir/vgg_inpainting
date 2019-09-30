@@ -2,8 +2,59 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f192069d-9cca-41ce-8b91-d60babadc125" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/model/inpaint.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/inpaint.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/models_big.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/models_big.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commands.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/inpaint_vgg.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/inpaint_vgg.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000231581.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000231596.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000231773.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000231942.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000232051.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000232091.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000232127.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000232987.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000233022.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000233566.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000234000.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000234653.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000235200.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000235239.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000235642.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000235838.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000235914.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000236406.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000236572.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000236580.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000236925.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000237090.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000237510.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000238022.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000238201.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000238700.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000238822.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000239194.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000239254.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000239752.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000239943.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000240304.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000240414.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000240751.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000241037.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000241347.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000241530.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000241579.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000241779.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000241868.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000241887.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000242100.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000242717.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000242757.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000243187.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000243355.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000243907.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000247368.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000247723.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/000000248045.jpg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,10 +81,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/commands.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="62" selection-start-column="62" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/datasets.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
+            <state relative-caret-position="1564">
               <caret line="68" column="15" selection-start-line="68" selection-start-column="15" selection-end-line="68" selection-end-column="15" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
@@ -42,11 +102,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/inpaint_vgg.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="66" column="50" selection-start-line="66" selection-start-column="50" selection-end-line="66" selection-end-column="50" />
+            <state relative-caret-position="784">
+              <caret line="45" column="58" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="58" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -55,10 +115,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/inpaint.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="652">
+              <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/models_big.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="154" column="38" lean-forward="true" selection-start-line="154" selection-start-column="38" selection-end-line="154" selection-end-column="38" />
+            <state relative-caret-position="3473">
+              <caret line="154" column="38" selection-start-line="154" selection-start-column="38" selection-end-line="154" selection-end-column="38" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -94,8 +163,8 @@
       <find>window_size</find>
       <find>test_data_dir</find>
       <find>channels</find>
-      <find>chann</find>
       <find>args</find>
+      <find>chann</find>
     </findStrings>
     <replaceStrings>
       <replace>.to(device)</replace>
@@ -115,6 +184,7 @@
         <option value="$PROJECT_DIR$/model/inpaint.py" />
         <option value="$PROJECT_DIR$/model/models_big.py" />
         <option value="$PROJECT_DIR$/model/inpaint_vgg.py" />
+        <option value="$PROJECT_DIR$/commands.txt" />
       </list>
     </option>
   </component>
@@ -130,6 +200,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -158,11 +229,15 @@
               <item name="vgg_inpainting" type="462c0819:PsiDirectoryNode" />
               <item name="samples" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="vgg_inpainting" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vgg_inpainting" type="462c0819:PsiDirectoryNode" />
+              <item name="test_images" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -216,18 +291,19 @@
       <workItem from="1568187055953" duration="1405000" />
       <workItem from="1568797762040" duration="9073000" />
       <workItem from="1569160673133" duration="386000" />
-      <workItem from="1569310802009" duration="13325000" />
+      <workItem from="1569310802009" duration="14419000" />
+      <workItem from="1569841019609" duration="1300000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24400000" />
+    <option name="totallyTimeSpent" value="26794000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="9" y="23" width="1319" height="843" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16444792" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16679718" />
       <window_info id="Structure" order="1" show_stripe_button="false" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" show_stripe_button="false" side_tool="true" />
       <window_info id="Remote Host" order="3" sideWeight="0.8074074" weight="0.18413392" />
@@ -240,7 +316,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32866243" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="File Transfer" order="9" weight="0.31557924" />
+      <window_info anchor="bottom" id="File Transfer" order="9" visible="true" weight="0.31557924" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4992636" weight="0.32866243" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5014728" side_tool="true" weight="0.28993288" />
@@ -292,19 +368,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/model/models_big.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3473">
+          <caret line="154" column="38" selection-start-line="154" selection-start-column="38" selection-end-line="154" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/model/inpaint.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="652">
-          <caret line="64" column="12" selection-start-line="64" selection-start-column="12" selection-end-line="64" selection-end-column="12" />
-          <folding>
-            <element signature="e#1#13#0" expanded="true" />
-          </folding>
+          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/datasets.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
+        <state relative-caret-position="1564">
           <caret line="68" column="15" selection-start-line="68" selection-start-column="15" selection-end-line="68" selection-end-column="15" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
@@ -312,23 +395,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/models_big.py">
+    <entry file="file://$PROJECT_DIR$/model/inpaint_vgg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="154" column="38" lean-forward="true" selection-start-line="154" selection-start-column="38" selection-end-line="154" selection-end-column="38" />
+        <state relative-caret-position="784">
+          <caret line="45" column="58" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="58" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/inpaint_vgg.py">
+    <entry file="file://$PROJECT_DIR$/commands.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="66" column="50" selection-start-line="66" selection-start-column="50" selection-end-line="66" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
+        <state>
+          <caret column="62" selection-start-column="62" selection-end-column="62" />
         </state>
       </provider>
     </entry>
