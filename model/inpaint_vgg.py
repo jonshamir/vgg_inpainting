@@ -23,7 +23,7 @@ def get_arguments():
     parser.add_argument("--eval_only", action='store_true', default=False)
     parser.add_argument("--test_only", action='store_true', default=False)
 
-    parser.add_argument("--latent_dim", type=int, default=100)
+    parser.add_argument("--latent_dim", type=int, default=128)
     parser.add_argument("--image_size", type=int, default=64)
     parser.add_argument("--channels", type=int, default=3)
     parser.add_argument("--optim_steps", type=int, default=8000)
