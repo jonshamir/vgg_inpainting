@@ -18,6 +18,7 @@ def get_arguments():
     parser.add_argument("--batch_size", type=int, default=25)
     parser.add_argument("--gan_path", type=str, default="./checkpoints/")
     parser.add_argument("--dataset", type=str, default="frogs")
+    parser.add_argument("--pretrained_model", type=str, default="frogs_conv")
     parser.add_argument("--test_data_dir", type=str, default="../test_images/")
     parser.add_argument("--eval_only", action='store_true', default=False)
     parser.add_argument("--test_only", action='store_true', default=False)
@@ -41,9 +42,9 @@ def inpaint(opt):
     dataloader = DataLoader(dataset, batch_size=opt.batch_size)
 
     # Loading trained GAN model
-    saved_G = torch.load(opt.gan_path + opt.dataset + "/modelD.pth")
-    saved_D = torch.load(opt.gan_path + opt.dataset + "/modelG.pth")
-    saved_Inv = torch.load(opt.gan_path + opt.dataset + "/modelInv.pth")
+    saved_G = torch.load(opt.gan_path + opt.pretrained_model + "/modelD.pth")
+    saved_D = torch.load(opt.gan_path + opt.pretrained_model + "/modelG.pth")
+    saved_Inv = torch.load(opt.gan_path + opt.pretrained_model + "/modelInv.pth")
     netG = models.DeepGenerator(opt.latent_dim).to(device)
     netD = models.StudentDiscriminator().to(device)
     netInv = models.VGGInverterG().to(device)
