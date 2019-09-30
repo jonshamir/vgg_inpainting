@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f192069d-9cca-41ce-8b91-d60babadc125" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands.txt" beforeDir="false" afterPath="$PROJECT_DIR$/commands.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/inpaint_vgg.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/inpaint_vgg.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,7 +35,7 @@
         <entry file="file://$PROJECT_DIR$/commands.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="23">
-              <caret line="1" column="74" selection-start-line="1" selection-end-line="1" selection-end-column="157" />
+              <caret line="1" column="125" selection-start-line="1" selection-end-line="1" selection-end-column="157" />
             </state>
           </provider>
         </entry>
@@ -41,7 +43,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/datasets.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
+            <state relative-caret-position="-1099">
               <caret line="13" column="54" selection-start-line="13" selection-start-column="54" selection-end-line="13" selection-end-column="54" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
@@ -53,8 +55,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model/inpaint_vgg.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="45" column="71" selection-start-line="45" selection-start-column="71" selection-end-line="45" selection-end-column="71" />
+            <state relative-caret-position="471">
+              <caret line="29" column="65" selection-start-line="29" selection-start-column="65" selection-end-line="29" selection-end-column="65" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -114,6 +116,7 @@
       <find>args</find>
       <find>chann</find>
       <find>DeepGenerator</find>
+      <find>conte</find>
     </findStrings>
     <replaceStrings>
       <replace>.to(device)</replace>
@@ -130,9 +133,9 @@
         <option value="$PROJECT_DIR$/model/train_gan.py" />
         <option value="$PROJECT_DIR$/model/datasets.py" />
         <option value="$PROJECT_DIR$/model/inpaint.py" />
-        <option value="$PROJECT_DIR$/commands.txt" />
         <option value="$PROJECT_DIR$/model/models.py" />
         <option value="$PROJECT_DIR$/model/models_big.py" />
+        <option value="$PROJECT_DIR$/commands.txt" />
         <option value="$PROJECT_DIR$/model/inpaint_vgg.py" />
       </list>
     </option>
@@ -156,27 +159,6 @@
             <path>
               <item name="vgg_inpainting" type="b2602c69:ProjectViewProjectNode" />
               <item name="vgg_inpainting" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vgg_inpainting" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vgg_inpainting" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vgg_inpainting" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vgg_inpainting" type="462c0819:PsiDirectoryNode" />
-              <item name="outputs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vgg_inpainting" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vgg_inpainting" type="462c0819:PsiDirectoryNode" />
-              <item name="pretrained_models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vgg_inpainting" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vgg_inpainting" type="462c0819:PsiDirectoryNode" />
-              <item name="pretrained_models" type="462c0819:PsiDirectoryNode" />
-              <item name="frogs_conv" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="vgg_inpainting" type="b2602c69:ProjectViewProjectNode" />
@@ -246,12 +228,12 @@
       <workItem from="1568797762040" duration="9073000" />
       <workItem from="1569160673133" duration="386000" />
       <workItem from="1569310802009" duration="14419000" />
-      <workItem from="1569841019609" duration="3206000" />
+      <workItem from="1569841019609" duration="3703000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28700000" />
+    <option name="totallyTimeSpent" value="29197000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="9" y="23" width="1319" height="843" extended-state="0" />
@@ -342,13 +324,13 @@
     <entry file="file://$PROJECT_DIR$/commands.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
-          <caret line="1" column="74" selection-start-line="1" selection-end-line="1" selection-end-column="157" />
+          <caret line="1" column="125" selection-start-line="1" selection-end-line="1" selection-end-column="157" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/datasets.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
+        <state relative-caret-position="-1099">
           <caret line="13" column="54" selection-start-line="13" selection-start-column="54" selection-end-line="13" selection-end-column="54" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
@@ -358,8 +340,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/inpaint_vgg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="45" column="71" selection-start-line="45" selection-start-column="71" selection-end-line="45" selection-end-column="71" />
+        <state relative-caret-position="471">
+          <caret line="29" column="65" selection-start-line="29" selection-start-column="65" selection-end-line="29" selection-end-column="65" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
