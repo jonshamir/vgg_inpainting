@@ -27,7 +27,7 @@ def get_arguments():
     parser.add_argument("--image_size", type=int, default=64)
     parser.add_argument("--channels", type=int, default=3)
     parser.add_argument("--optim_steps", type=int, default=8000)
-    parser.add_argument("--prior_weight", type=float, default=100)
+    parser.add_argument("--prior_weight", type=float, default=10)
     parser.add_argument("--window_size", type=int, default=25)
     args = parser.parse_args()
     return args
