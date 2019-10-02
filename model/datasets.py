@@ -86,11 +86,12 @@ class CorruptedPatchDataset(Dataset):
         ratio = self.image_size[0] / self.feats_size[0]
         feats_mask[math.floor(top/ratio):math.ceil(bottom/ratio), math.floor(left/ratio):math.ceil(right/ratio)] = 0
 
-        mask = mask.reshape((1,)+mask.shape)
+        mask = mask.reshape((1,) + mask.shape)
+        feats_mask = feats_mask.reshape((1,) + feats_mask.shape)
 
         # Weighted Mask
         if self.weighted_mask: 
             weighted_mask = get_weighted_mask(mask, self.window_size)
-            return torch.from_numpy(target_image), torch.from_numpy(original_image), torch.from_numpy(mask), torch.from_numpy(weighted_mask), torch.from_numpy(feats_mask)
+            return torch.FloatTensor(target_image), torch.FloatTensor(original_image), torch.FloatTensor(mask), torch.FloatTensor(weighted_mask), torch.FloatTensor(feats_mask)
         else:
-            return torch.from_numpy(target_image), torch.from_numpy(original_image), torch.from_numpy(mask)
+            return torch.FloatTensor(target_image), torch.FloatTensor(original_image), torch.FloatTensor(mask)
