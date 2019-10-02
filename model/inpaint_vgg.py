@@ -22,6 +22,7 @@ def get_arguments():
     parser.add_argument("--test_data_dir", type=str, default="../test_images/")
     parser.add_argument("--eval_only", action='store_true', default=False)
     parser.add_argument("--test_only", action='store_true', default=False)
+    parser.add_argument("--deep_context", action='store_true', default=False)
 
     parser.add_argument("--latent_dim", type=int, default=128)
     parser.add_argument("--image_size", type=int, default=64)
@@ -33,8 +34,12 @@ def get_arguments():
     return args
 
 def calc_context_loss(corrupt, generated, masks):
-    return torch.sum(((corrupt - generated)**2) * masks)
-    # return torch.sum(torch.abs((corrupt - generated) * masks))
+    # return torch.sum(((corrupt - generated)**2) * masks)
+    return torch.sum(torch.abs((corrupt - generated) * masks))
+
+def calc_context_loss_deep(corrupt, gen_feats, masks):
+    return torch.sum(((corrupt - gen_feats)**2) * masks)
+
 
 def inpaint(opt):
     data_path = opt.test_data_dir + opt.dataset + '/'
@@ -63,7 +68,10 @@ def inpaint(opt):
             gen_feats = netG(z)
             gen_images = netInv(gen_feats)
 
-            context_loss = calc_context_loss(corrupted_images, gen_images, weighted_masks)
+            if opt.deep_context:
+                context_loss = calc_context_loss_deep(corrupted_images, gen_feats, weighted_masks)
+            else:
+                context_loss = calc_context_loss(corrupted_images, gen_images, weighted_masks)
             prior_loss = torch.mean(netD(gen_feats)) * opt.prior_weight
             inpaint_loss = context_loss + prior_loss
 
