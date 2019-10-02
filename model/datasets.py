@@ -74,9 +74,9 @@ class CorruptedPatchDataset(Dataset):
         w = np.random.randint(self.image_size[1]//4, self.image_size[1]//2)
         mask[max(0,x-h//2):min(self.image_size[0],x+h//2), max(0,y-w//2):min(self.image_size[1],y+w//2)] = 0
         target_image = original_image.numpy().copy()
-        target_image[:, 1-mask > 0.5] = np.max(target_image)
+        target_image[:, 1-mask > 0.5] = 0
 
-        mask = mask.reshape((1,)+mask.shape)
+        mask = mask.reshape((1,) + mask.shape)
 
         # Weighted Mask
         if self.weighted_mask: 
