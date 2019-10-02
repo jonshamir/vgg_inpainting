@@ -62,7 +62,7 @@ def inpaint(opt):
     netInv.load_state_dict(saved_Inv, strict=False)
 
     for i, (corrupt_images, original_images, masks, weighted_masks, feats_masks) in enumerate(dataloader):
-        corrupt_images, masks, weighted_masks = corrupt_images.to(device), masks.to(device), weighted_masks.to(device)
+        corrupt_images, masks, weighted_masks, feats_masks = corrupt_images.to(device), masks.to(device), weighted_masks.to(device), feats_masks.to(device)
         z = nn.Parameter(torch.FloatTensor(np.random.normal(0, 1, (corrupt_images.shape[0], opt.latent_dim,))).to(device))
         inpaint_opt = optim.Adam([z])
 
