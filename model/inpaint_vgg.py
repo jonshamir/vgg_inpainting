@@ -38,10 +38,10 @@ def calc_context_loss(corrupt_images, gen_images, masks):
     # return torch.sum(((corrupt - generated)**2) * masks) # L2
     return torch.sum(torch.abs((corrupt_images - gen_images) * masks)) # L1
 
-def calc_context_loss_deep(corrupt_images, gen_feats, masks):
+def calc_context_loss_deep(corrupt_images, gen_feats, masks, feats_masks):
     corrupt_feats = get_VGG_features(corrupt_images).detach()
     feats_spatial_size = gen_feats.size()[-2:]
-    masks = nn.functional.interpolate(masks, size=feats_spatial_size)
+    masks = nn.functional.interpolate(masks, size=feats_spatial_size) * feats_masks
     return torch.sum(torch.abs((corrupt_feats - gen_feats) * masks))
 
 
@@ -61,7 +61,7 @@ def inpaint(opt):
     netD.load_state_dict(saved_D, strict=False)
     netInv.load_state_dict(saved_Inv, strict=False)
 
-    for i, (corrupt_images, original_images, masks, weighted_masks) in enumerate(dataloader):
+    for i, (corrupt_images, original_images, masks, weighted_masks, feats_masks) in enumerate(dataloader):
         corrupt_images, masks, weighted_masks = corrupt_images.to(device), masks.to(device), weighted_masks.to(device)
         z = nn.Parameter(torch.FloatTensor(np.random.normal(0, 1, (corrupt_images.shape[0], opt.latent_dim,))).to(device))
         inpaint_opt = optim.Adam([z])
@@ -73,7 +73,7 @@ def inpaint(opt):
             gen_images = netInv(gen_feats)
 
             if opt.deep_context:
-                context_loss = calc_context_loss_deep(corrupt_images, gen_feats, weighted_masks)
+                context_loss = calc_context_loss_deep(corrupt_images, gen_feats, weighted_masks, feats_masks)
             else:
                 context_loss = calc_context_loss(corrupt_images, gen_images, weighted_masks)
             prior_loss = torch.mean(netD(gen_feats)) * opt.prior_weight

@@ -44,12 +44,13 @@ def get_weighted_mask(mask, window_size):
     return output * mask
 
 class CorruptedPatchDataset(Dataset):
-    def __init__(self, directory, image_size=(64,64), weighted_mask=True, window_size=7):
+    def __init__(self, directory, image_size=(64,64), weighted_mask=True, window_size=7, feats_size=(14,14)):
         self.directory = directory
         self.images_filename = glob.glob(os.path.join(directory, "*.png")) + glob.glob(os.path.join(directory, "*.jpg"))
         self.image_size = image_size
         self.weighted_mask = weighted_mask
         self.window_size = window_size
+        self.feats_size = feats_size
         self.transform = transforms.Compose([
             transforms.ColorJitter(0, 0, 0.2, 0.05),
             transforms.RandomHorizontalFlip(),
@@ -72,15 +73,23 @@ class CorruptedPatchDataset(Dataset):
         y = np.random.randint(self.image_size[1]//6, 5*self.image_size[1]//6)
         h = np.random.randint(self.image_size[0]//4, self.image_size[0]//2)
         w = np.random.randint(self.image_size[1]//4, self.image_size[1]//2)
-        mask[max(0,x-h//2):min(self.image_size[0],x+h//2), max(0,y-w//2):min(self.image_size[1],y+w//2)] = 0
+        top = max(0, x - h // 2)
+        bottom = min(self.image_size[0], x + h // 2)
+        left = max(0, y - w // 2)
+        right = min(self.image_size[1], y + w // 2)
+        mask[top:bottom, left:right] = 0
         target_image = original_image.numpy().copy()
-        target_image[:, 1-mask > 0.5] = 0
+        target_image[:, 1-mask > 0.5] = np.max(target_image)
 
-        mask = mask.reshape((1,) + mask.shape)
+        feats_mask = np.ones(self.feats_size, dtype=np.float32)
+        ratio = self.image_size[0] / self.feats_size[0]
+        feats_mask[np.floor(top/ratio):np.ceil(bottom/ratio), np.floor(left/ratio):np.ceil(right/ratio)] = 0
+
+        mask = mask.reshape((1,)+mask.shape)
 
         # Weighted Mask
         if self.weighted_mask: 
             weighted_mask = get_weighted_mask(mask, self.window_size)
-            return torch.FloatTensor(target_image), torch.FloatTensor(original_image), torch.FloatTensor(mask), torch.FloatTensor(weighted_mask)
+            return torch.from_numpy(target_image), torch.from_numpy(original_image), torch.from_numpy(mask), torch.from_numpy(weighted_mask), torch.from_numpy(feats_mask)
         else:
-            return torch.FloatTensor(target_image), torch.FloatTensor(original_image), torch.FloatTensor(mask)
+            return torch.from_numpy(target_image), torch.from_numpy(original_image), torch.from_numpy(mask)
