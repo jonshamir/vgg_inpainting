@@ -40,6 +40,9 @@ def calc_context_loss(corrupt_images, gen_images, masks):
 
 def calc_context_loss_deep(corrupt_images, gen_feats, masks):
     corrupt_feats = get_VGG_features(corrupt_images)
+    print(masks.shape)
+    print(gen_feats.size())
+    print(gen_feats.shape)
     masks = nn.functional.interpolate(masks, size=gen_feats.size())
     return torch.sum(torch.abs((corrupt_feats - gen_feats) * masks))
 
