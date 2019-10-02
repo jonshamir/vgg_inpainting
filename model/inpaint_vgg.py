@@ -2,9 +2,9 @@ import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader
 from torchvision.utils import save_image
-import torch.optim as optim
-
 import numpy as np
+import torch.optim as optim
+from .vgg_extractor import get_VGG_features
 
 import argparse
 
@@ -33,12 +33,14 @@ def get_arguments():
     args = parser.parse_args()
     return args
 
-def calc_context_loss(corrupt, generated, masks):
+def calc_context_loss(corrupt_images, gen_images, masks):
     # return torch.sum(((corrupt - generated)**2) * masks)
-    return torch.sum(torch.abs((corrupt - generated) * masks))
+    return torch.sum(torch.abs((corrupt_images - gen_images) * masks))
 
-def calc_context_loss_deep(corrupt, gen_feats, masks):
-    return torch.sum(((corrupt - gen_feats)**2) * masks)
+def calc_context_loss_deep(corrupt_images, gen_feats, masks):
+    corrupt_feats = get_VGG_features(corrupt_images)
+    masks = nn.functional.interpolate(masks, size=gen_feats.size())
+    return torch.sum(torch.abs((corrupt_feats - gen_feats) * masks))
 
 
 def inpaint(opt):
@@ -57,9 +59,9 @@ def inpaint(opt):
     netD.load_state_dict(saved_D, strict=False)
     netInv.load_state_dict(saved_Inv, strict=False)
 
-    for i, (corrupted_images, original_images, masks, weighted_masks) in enumerate(dataloader):
-        corrupted_images, masks, weighted_masks = corrupted_images.to(device), masks.to(device), weighted_masks.to(device)
-        z = nn.Parameter(torch.FloatTensor(np.random.normal(0, 1, (corrupted_images.shape[0], opt.latent_dim,))).to(device))
+    for i, (corrupt_images, original_images, masks, weighted_masks) in enumerate(dataloader):
+        corrupt_images, masks, weighted_masks = corrupt_images.to(device), masks.to(device), weighted_masks.to(device)
+        z = nn.Parameter(torch.FloatTensor(np.random.normal(0, 1, (corrupt_images.shape[0], opt.latent_dim,))).to(device))
         inpaint_opt = optim.Adam([z])
 
         print("Training input noise...")
@@ -69,9 +71,9 @@ def inpaint(opt):
             gen_images = netInv(gen_feats)
 
             if opt.deep_context:
-                context_loss = calc_context_loss_deep(corrupted_images, gen_feats, weighted_masks)
+                context_loss = calc_context_loss_deep(corrupt_images, gen_feats, weighted_masks)
             else:
-                context_loss = calc_context_loss(corrupted_images, gen_images, weighted_masks)
+                context_loss = calc_context_loss(corrupt_images, gen_images, weighted_masks)
             prior_loss = torch.mean(netD(gen_feats)) * opt.prior_weight
             inpaint_loss = context_loss + prior_loss
 
@@ -81,10 +83,10 @@ def inpaint(opt):
                 print("Epoch: {}/{}\tLoss: {:.3f}\tContext loss: {:.3f}\tPrior loss: {:.3f}\r".format(1 + epoch, opt.optim_steps, inpaint_loss, context_loss, prior_loss))
         print("")
 
-        blended_images = masks * corrupted_images + (1 - masks) * gen_images.detach()
+        blended_images = masks * corrupt_images + (1 - masks) * gen_images.detach()
     
-        image_range = torch.min(corrupted_images), torch.max(corrupted_images)
-        save_image(corrupted_images, "../outputs/corrupted_{}.png".format(i), normalize=True, range=image_range, nrow=5)
+        image_range = torch.min(corrupt_images), torch.max(corrupt_images)
+        save_image(corrupt_images, "../outputs/corrupted_{}.png".format(i), normalize=True, range=image_range, nrow=5)
         save_image(gen_images, "../outputs/output_{}.png".format(i), normalize=True, range=image_range, nrow=5)
         save_image(blended_images, "../outputs/blended_{}.png".format(i), normalize=True, range=image_range, nrow=5)
         save_image(original_images, "../outputs/original_{}.png".format(i), normalize=True, range=image_range, nrow=5)
