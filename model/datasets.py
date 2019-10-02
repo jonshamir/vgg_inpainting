@@ -5,6 +5,7 @@ from torchvision import transforms
 from skimage import transform
 from PIL import Image, ImageFile
 import skimage.io as io
+import math
 import numpy as np
 
 import glob
@@ -83,7 +84,7 @@ class CorruptedPatchDataset(Dataset):
 
         feats_mask = np.ones(self.feats_size, dtype=np.float32)
         ratio = self.image_size[0] / self.feats_size[0]
-        feats_mask[np.floor(top/ratio):np.ceil(bottom/ratio), np.floor(left/ratio):np.ceil(right/ratio)] = 0
+        feats_mask[math.floor(top/ratio):math.ceil(bottom/ratio), math.floor(left/ratio):math.ceil(right/ratio)] = 0
 
         mask = mask.reshape((1,)+mask.shape)
 
