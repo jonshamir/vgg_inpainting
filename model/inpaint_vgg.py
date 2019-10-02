@@ -4,7 +4,7 @@ from torch.utils.data import DataLoader
 from torchvision.utils import save_image
 import numpy as np
 import torch.optim as optim
-from .vgg_extractor import get_VGG_features
+from vgg_extractor import get_VGG_features
 
 import argparse
 
