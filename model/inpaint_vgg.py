@@ -19,7 +19,8 @@ def get_arguments():
     parser.add_argument("--gan_path", type=str, default="./checkpoints/")
     parser.add_argument("--dataset", type=str, default="frogs")
     parser.add_argument("--pretrained_model", type=str, default="frogs_conv")
-    parser.add_argument("--test_data_dir", type=str, default="../test_images/")
+    parser.add_argument("--test_dir", type=str, default="../test_images/")
+    parser.add_argument("--out_dir", type=str, default="../outputs/")
     parser.add_argument("--eval_only", action='store_true', default=False)
     parser.add_argument("--test_only", action='store_true', default=False)
     parser.add_argument("--deep_context", action='store_true', default=False)
@@ -44,7 +45,7 @@ def calc_context_loss_deep(corrupt_images, gen_feats, masks):
 
 
 def inpaint(opt):
-    data_path = opt.test_data_dir + opt.dataset + '/'
+    data_path = opt.test_dir + opt.dataset + '/'
     dataset = datasets.CorruptedPatchDataset(data_path, image_size=(opt.image_size, opt.image_size), weighted_mask=True, window_size=opt.window_size)
     dataloader = DataLoader(dataset, batch_size=opt.batch_size)
 
@@ -86,10 +87,10 @@ def inpaint(opt):
         blended_images = masks * corrupt_images + (1 - masks) * gen_images.detach()
     
         image_range = torch.min(corrupt_images), torch.max(corrupt_images)
-        save_image(corrupt_images, "../outputs/corrupted_{}.png".format(i), normalize=True, range=image_range, nrow=5)
-        save_image(gen_images, "../outputs/output_{}.png".format(i), normalize=True, range=image_range, nrow=5)
-        save_image(blended_images, "../outputs/blended_{}.png".format(i), normalize=True, range=image_range, nrow=5)
-        save_image(original_images, "../outputs/original_{}.png".format(i), normalize=True, range=image_range, nrow=5)
+        save_image(corrupt_images, opt.out_dir + "corrupted_{}.png".format(i), normalize=True, range=image_range, nrow=5)
+        save_image(gen_images, opt.out_dir + "output_{}.png".format(i), normalize=True, range=image_range, nrow=5)
+        save_image(blended_images, opt.out_dir + "blended_{}.png".format(i), normalize=True, range=image_range, nrow=5)
+        save_image(original_images, opt.out_dir + "original_{}.png".format(i), normalize=True, range=image_range, nrow=5)
 
         del z, inpaint_opt
 
