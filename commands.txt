@@ -1,4 +1,4 @@
 CUDA_VISIBLE_DEVICES=3 python inpaint_vgg.py --image_size 224 --dataset zebras --latent_dim 512
 CUDA_VISIBLE_DEVICES=3 python inpaint_vgg.py --image_size 224 --gan_path ../pretrained_models/ --dataset frogs --pretrained_model frogs_conv --latent_dim 128
 
-CUDA_VISIBLE_DEVICES=2 python inpaint_vgg.py --image_size 224 --gan_path ../pretrained_models/ --dataset frogs --pretrained_model frogs_conv --latent_dim 128 --deep_context True
+CUDA_VISIBLE_DEVICES=2 python inpaint_vgg.py --image_size 224 --gan_path ../pretrained_models/ --dataset frogs --pretrained_model frogs_conv --latent_dim 128 --deep_context True --out_dir ../outputs/deep/

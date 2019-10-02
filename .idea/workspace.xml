@@ -30,11 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/commands.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="177" />
+            <state relative-caret-position="115">
+              <caret line="3" column="204" selection-start-line="3" selection-start-column="204" selection-end-line="3" selection-end-column="204" />
             </state>
           </provider>
         </entry>
@@ -51,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/inpaint_vgg.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="92" column="51" selection-start-line="92" selection-start-column="51" selection-end-line="92" selection-end-column="51" />
+            <state relative-caret-position="-184">
+              <caret line="21" column="35" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="35" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -115,8 +115,9 @@
       <find>chann</find>
       <find>conte</find>
       <find>prior_weight</find>
-      <find>DeepGenerator</find>
       <find>test_data_dir</find>
+      <find>DeepGenerator</find>
+      <find>test</find>
     </findStrings>
     <replaceStrings>
       <replace>.to(device)</replace>
@@ -135,8 +136,8 @@
         <option value="$PROJECT_DIR$/model/models.py" />
         <option value="$PROJECT_DIR$/model/models_big.py" />
         <option value="$PROJECT_DIR$/model/datasets.py" />
-        <option value="$PROJECT_DIR$/commands.txt" />
         <option value="$PROJECT_DIR$/model/inpaint_vgg.py" />
+        <option value="$PROJECT_DIR$/commands.txt" />
       </list>
     </option>
   </component>
@@ -228,12 +229,12 @@
       <workItem from="1568797762040" duration="9073000" />
       <workItem from="1569160673133" duration="386000" />
       <workItem from="1569310802009" duration="14419000" />
-      <workItem from="1569841019609" duration="7057000" />
+      <workItem from="1569841019609" duration="7161000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32551000" />
+    <option name="totallyTimeSpent" value="32655000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="9" y="23" width="1319" height="843" extended-state="0" />
@@ -321,13 +322,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/commands.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="177" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/datasets.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1288">
@@ -340,11 +334,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/inpaint_vgg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="92" column="51" selection-start-line="92" selection-start-column="51" selection-end-line="92" selection-end-column="51" />
+        <state relative-caret-position="-184">
+          <caret line="21" column="35" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="35" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commands.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="3" column="204" selection-start-line="3" selection-start-column="204" selection-end-line="3" selection-end-column="204" />
         </state>
       </provider>
     </entry>
