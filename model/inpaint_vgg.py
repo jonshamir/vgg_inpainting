@@ -4,6 +4,7 @@ from torch.utils.data import DataLoader
 from torchvision.utils import save_image
 import numpy as np
 import torch.optim as optim
+import matplotlib.pyplot as plt
 from vgg_extractor import get_VGG_features
 
 import argparse
@@ -61,6 +62,9 @@ def inpaint(opt):
     netD.load_state_dict(saved_D, strict=False)
     netInv.load_state_dict(saved_Inv, strict=False)
 
+    context_losses = []
+    prior_losses = []
+
     for i, (corrupt_images, original_images, masks, weighted_masks, feats_masks) in enumerate(dataloader):
         corrupt_images, masks, weighted_masks, feats_masks = corrupt_images.to(device), masks.to(device), weighted_masks.to(device), feats_masks.to(device)
         z = nn.Parameter(torch.FloatTensor(np.random.normal(0, 1, (corrupt_images.shape[0], opt.latent_dim,))).to(device))
@@ -73,18 +77,24 @@ def inpaint(opt):
             gen_images = netInv(gen_feats)
 
             if opt.deep_context:
-                context_loss = calc_context_loss(corrupt_images, gen_images, weighted_masks)
-                context_loss += calc_context_loss_deep(corrupt_images, gen_feats, weighted_masks, feats_masks)
+                context_loss = calc_context_loss_deep(corrupt_images, gen_feats, weighted_masks, feats_masks)
+                # context_loss += calc_context_loss(corrupt_images, gen_images, weighted_masks)
             else:
                 context_loss = calc_context_loss(corrupt_images, gen_images, weighted_masks)
-                
+
             prior_loss = torch.mean(netD(gen_feats)) * opt.prior_weight
             inpaint_loss = context_loss + prior_loss
 
             inpaint_loss.backward()
             inpaint_opt.step()
-            if epoch % 500 == 0:
-                print("Epoch: {}/{}\tLoss: {:.3f}\tContext loss: {:.3f}\tPrior loss: {:.3f}\r".format(1 + epoch, opt.optim_steps, inpaint_loss, context_loss, prior_loss))
+
+            context_losses.append(context_loss.item())
+            prior_losses.append(prior_loss.item())
+
+            if epoch % 200 == 0:
+                print("Epoch: {}/{}\tLoss: {:.3f}\tContext loss: {:.3f}\tPrior loss: {:.3f}\r".format(1 + epoch,opt.optim_steps, inpaint_loss, context_loss, prior_loss))
+                save_image(gen_images, opt.out_dir + "blended_{}_{}.png".format(i, epoch), normalize=True, range=(-1,1), nrow=5)
+
         print("")
 
         blended_images = masks * corrupt_images + (1 - masks) * gen_images.detach()
@@ -94,6 +104,16 @@ def inpaint(opt):
         save_image(gen_images, opt.out_dir + "output_{}.png".format(i), normalize=True, range=image_range, nrow=5)
         save_image(blended_images, opt.out_dir + "blended_{}.png".format(i), normalize=True, range=image_range, nrow=5)
         save_image(original_images, opt.out_dir + "original_{}.png".format(i), normalize=True, range=image_range, nrow=5)
+
+        # save losses plot
+        plt.figure(figsize=(10, 5))
+        plt.title("Loss During Training")
+        plt.plot(context_losses, label="Context (L1)")
+        plt.plot(prior_losses, label="Prior (D)")
+        plt.xlabel("iterations")
+        plt.ylabel("Loss")
+        plt.legend()
+        plt.savefig('loss.png', dpi=200)
 
         del z, inpaint_opt
 
