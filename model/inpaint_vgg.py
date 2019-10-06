@@ -117,7 +117,8 @@ def inpaint(opt):
         # save losses plot
         plt.figure(figsize=(10, 5))
         plt.title("Loss During Training")
-        plt.plot(context_losses, label="Context")
+        plt.plot(context_losses, label="Img Context")
+        plt.plot(deep_context_losses, label="Feat Context")
         plt.plot(prior_losses, label="Prior (D)")
         plt.xlabel("iterations")
         plt.ylabel("Loss")
