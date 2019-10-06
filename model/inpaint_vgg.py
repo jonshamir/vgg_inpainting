@@ -97,9 +97,10 @@ def inpaint(opt):
             inpaint_loss.backward()
             inpaint_opt.step()
 
-
             if epoch % 100 == 0:
                 epoch_str = str(epoch).zfill(6)
+                print(context_losses[-1])
+                print(deep_context_losses[-1])
                 print("Epoch: {}/{}\tLoss: {:.3f}\tContext loss: {:.3f}\tPrior loss: {:.3f}\r".format(1 + epoch, opt.optim_steps, inpaint_loss, context_loss, prior_loss))
                 save_image(gen_images, opt.out_dir + "out_{}_{}.png".format(i, epoch_str), normalize=True, range=(-1,1), nrow=5)
 
