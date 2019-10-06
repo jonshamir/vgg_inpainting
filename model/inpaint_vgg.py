@@ -38,7 +38,7 @@ def get_arguments():
 
 def calc_context_loss(corrupt_images, gen_images, masks):
     # return torch.sum(((corrupt - generated)**2) * masks) # L2
-    return torch.sum(torch.abs((corrupt_images - gen_images) * masks)) # L1
+    return torch.sum(torch.abs((corrupt_images - gen_images))) # * masks)) # L1
 
 def calc_context_loss_deep(corrupt_images, gen_feats, masks, feats_masks):
     corrupt_feats = get_VGG_features(corrupt_images).detach()
@@ -78,10 +78,10 @@ def inpaint(opt):
             gen_images = netInv(gen_feats)
 
             if opt.deep_context:
-                context_loss = calc_context_loss_deep(original_images, gen_feats, 1, 1)
+                context_loss = calc_context_loss_deep(original_images, gen_feats, weighted_masks, feats_masks)
                 # context_loss += calc_context_loss(corrupt_images, gen_images, weighted_masks)
             else:
-                context_loss = calc_context_loss(original_images, gen_images, 1)
+                context_loss = calc_context_loss(original_images, gen_images, weighted_masks)
 
             prior_loss = torch.mean(netD(gen_feats)) * opt.prior_weight
             inpaint_loss = context_loss + prior_loss
