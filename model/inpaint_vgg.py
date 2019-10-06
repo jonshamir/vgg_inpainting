@@ -78,10 +78,10 @@ def inpaint(opt):
             gen_images = netInv(gen_feats)
 
             if opt.deep_context:
-                context_loss = calc_context_loss_deep(corrupt_images, gen_feats, weighted_masks, feats_masks)
+                context_loss = calc_context_loss_deep(original_images, gen_feats, 1, 1)
                 # context_loss += calc_context_loss(corrupt_images, gen_images, weighted_masks)
             else:
-                context_loss = calc_context_loss(corrupt_images, gen_images, weighted_masks)
+                context_loss = calc_context_loss(original_images, gen_images, 1)
 
             prior_loss = torch.mean(netD(gen_feats)) * opt.prior_weight
             inpaint_loss = context_loss + prior_loss

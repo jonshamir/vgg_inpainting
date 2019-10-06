@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f192069d-9cca-41ce-8b91-d60babadc125" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/inpaint_vgg.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/inpaint_vgg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/loss.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,8 +53,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model/inpaint_vgg.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="605">
-              <caret line="117" column="20" selection-start-line="117" selection-start-column="20" selection-end-line="117" selection-end-column="20" />
+            <state relative-caret-position="348">
+              <caret line="80" column="86" selection-start-line="80" selection-start-column="86" selection-end-line="80" selection-end-column="86" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -226,12 +224,12 @@
       <workItem from="1568797762040" duration="9073000" />
       <workItem from="1569160673133" duration="386000" />
       <workItem from="1569310802009" duration="14419000" />
-      <workItem from="1569841019609" duration="14928000" />
+      <workItem from="1569841019609" duration="15027000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40422000" />
+    <option name="totallyTimeSpent" value="40521000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="9" y="23" width="1355" height="843" extended-state="0" />
@@ -338,8 +336,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/inpaint_vgg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="605">
-          <caret line="117" column="20" selection-start-line="117" selection-start-column="20" selection-end-line="117" selection-end-column="20" />
+        <state relative-caret-position="348">
+          <caret line="80" column="86" selection-start-line="80" selection-start-column="86" selection-end-line="80" selection-end-column="86" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
