@@ -2,9 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f192069d-9cca-41ce-8b91-d60babadc125" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/inpaint_vgg.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/inpaint_vgg.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_000000.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_000100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_000200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_000300.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_000400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_000500.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_000600.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_000700.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_000800.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_000900.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_001000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_001100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_001200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_001300.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_001400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_001500.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_001600.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_001700.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_001800.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_001900.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_002000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_002100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_002200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_002300.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_002400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_002500.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_002600.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_002700.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_002800.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_002900.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_003000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_003100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_003200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_003300.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/outputs/deep/output_0.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,8 +89,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model/inpaint_vgg.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+            <state relative-caret-position="321">
+              <caret line="85" column="17" lean-forward="true" selection-start-line="85" selection-start-column="17" selection-end-line="85" selection-end-column="17" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -227,12 +260,12 @@
       <workItem from="1568797762040" duration="9073000" />
       <workItem from="1569160673133" duration="386000" />
       <workItem from="1569310802009" duration="14419000" />
-      <workItem from="1569841019609" duration="15399000" />
+      <workItem from="1569841019609" duration="15633000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40893000" />
+    <option name="totallyTimeSpent" value="41127000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="9" y="23" width="1355" height="843" extended-state="0" />
@@ -339,8 +372,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/inpaint_vgg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        <state relative-caret-position="321">
+          <caret line="85" column="17" lean-forward="true" selection-start-line="85" selection-start-column="17" selection-end-line="85" selection-end-column="17" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>

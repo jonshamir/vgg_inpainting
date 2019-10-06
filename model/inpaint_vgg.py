@@ -82,7 +82,7 @@ def inpaint(opt):
 
             if opt.deep_context:
                 context_loss = calc_context_loss_deep(corrupt_images, gen_feats, weighted_masks, feats_masks)
-                # context_loss += calc_context_loss(corrupt_images, gen_images, weighted_masks)
+                context_loss += calc_context_loss(corrupt_images, gen_images, weighted_masks)
             else:
                 context_loss = calc_context_loss(corrupt_images, gen_images, weighted_masks)
 
