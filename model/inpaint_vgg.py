@@ -92,7 +92,7 @@ def inpaint(opt):
             context_losses.append(context_loss.item())
             prior_losses.append(prior_loss.item())
 
-            if epoch % 200 == 0:
+            if epoch % 100 == 0:
                 epoch_str = str(epoch).zfill(6)
                 print("Epoch: {}/{}\tLoss: {:.3f}\tContext loss: {:.3f}\tPrior loss: {:.3f}\r".format(1 + epoch, opt.optim_steps, inpaint_loss, context_loss, prior_loss))
                 save_image(gen_images, opt.out_dir + "out_{}_{}.png".format(i, epoch_str), normalize=True, range=(-1,1), nrow=5)
@@ -110,12 +110,12 @@ def inpaint(opt):
         # save losses plot
         plt.figure(figsize=(10, 5))
         plt.title("Loss During Training")
-        plt.plot(context_losses, label="Context (L1)")
+        plt.plot(context_losses, label="Context")
         plt.plot(prior_losses, label="Prior (D)")
         plt.xlabel("iterations")
         plt.ylabel("Loss")
         plt.legend()
-        plt.savefig('loss.png', dpi=200)
+        plt.savefig(opt.out_dir + "loss.png", dpi=200)
 
         del z, inpaint_opt
 
