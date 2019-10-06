@@ -64,6 +64,7 @@ def inpaint(opt):
     netInv.load_state_dict(saved_Inv, strict=False)
 
     context_losses = []
+    deep_context_losses = []
     prior_losses = []
 
     for i, (corrupt_images, original_images, masks, weighted_masks, feats_masks) in enumerate(dataloader):
@@ -80,20 +81,22 @@ def inpaint(opt):
             gen_feats = netG(z)
             gen_images = netInv(gen_feats)
 
+            context_loss = calc_context_loss(corrupt_images, gen_images, weighted_masks)
+            context_losses.append(context_loss.item())
+
             if opt.deep_context:
-                context_loss = calc_context_loss_deep(corrupt_images, gen_feats, weighted_masks, feats_masks)
-                context_loss += calc_context_loss(corrupt_images, gen_images, weighted_masks)
-            else:
-                context_loss = calc_context_loss(corrupt_images, gen_images, weighted_masks)
+                deep_context_loss = calc_context_loss_deep(corrupt_images, gen_feats, weighted_masks, feats_masks)
+                deep_context_losses.append(deep_context_loss.item())
+                context_loss += deep_context_loss
 
             prior_loss = torch.mean(netD(gen_feats)) * opt.prior_weight
+            prior_losses.append(prior_loss.item())
+
             inpaint_loss = context_loss + prior_loss
 
             inpaint_loss.backward()
             inpaint_opt.step()
 
-            context_losses.append(context_loss.item())
-            prior_losses.append(prior_loss.item())
 
             if epoch % 100 == 0:
                 epoch_str = str(epoch).zfill(6)
