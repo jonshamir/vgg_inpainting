@@ -4,13 +4,14 @@ from torch.utils.data import DataLoader
 from torchvision.utils import save_image
 import numpy as np
 import torch.optim as optim
-import matplotlib.pyplot as plt
 from vgg_extractor import get_VGG_features
-
 import argparse
 
 import models_big as models
 import datasets
+
+import matplotlib.pyplot as plt
+plt.switch_backend('agg')
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
@@ -92,8 +93,9 @@ def inpaint(opt):
             prior_losses.append(prior_loss.item())
 
             if epoch % 200 == 0:
-                print("Epoch: {}/{}\tLoss: {:.3f}\tContext loss: {:.3f}\tPrior loss: {:.3f}\r".format(1 + epoch,opt.optim_steps, inpaint_loss, context_loss, prior_loss))
-                save_image(gen_images, opt.out_dir + "blended_{}_{}.png".format(i, epoch), normalize=True, range=(-1,1), nrow=5)
+                epoch_str = str(epoch).zfill(6)
+                print("Epoch: {}/{}\tLoss: {:.3f}\tContext loss: {:.3f}\tPrior loss: {:.3f}\r".format(1 + epoch, opt.optim_steps, inpaint_loss, context_loss, prior_loss))
+                save_image(gen_images, opt.out_dir + "out_{}_{}.png".format(i, epoch_str), normalize=True, range=(-1,1), nrow=5)
 
         print("")
 
