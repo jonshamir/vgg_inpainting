@@ -82,7 +82,8 @@ def inpaint(opt):
 
         # z = nn.Parameter(torch.FloatTensor(np.random.normal(0, 1, (corrupt_images.shape[0], opt.latent_dim,))).to(device))
         print("Getting initial noise from encoder...")
-        z = nn.Parameter(netE(corrupt_images).detach())
+        corrupt_feats = get_VGG_features(corrupt_images).detach()
+        z = nn.Parameter(netE(corrupt_feats).detach())
         inpaint_opt = optim.Adam([z])
 
         print("Training input noise...")

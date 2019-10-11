@@ -2,84 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f192069d-9cca-41ce-8b91-d60babadc125" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pretrained_models/frogs_conv/modelE.pth" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/inpaint_vgg.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/inpaint_vgg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/models_big.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/models_big.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/blended_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/blended_0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/corrupted_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/corrupted_0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/loss.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/loss.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/original_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/original_0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_000000.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_000000.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_000100.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_000100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_000200.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_000200.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_000300.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_000300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_000400.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_000400.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_000500.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_000500.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_000600.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_000600.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_000700.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_000700.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_000800.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_000800.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_000900.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_000900.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_001000.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_001000.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_001100.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_001100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_001200.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_001200.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_001300.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_001300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_001400.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_001400.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_001500.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_001500.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_001600.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_001600.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_001700.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_001700.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_001800.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_001800.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_001900.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_001900.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_002000.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_002000.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_002100.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_002100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_002200.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_002200.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_002300.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_002300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_002400.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_002400.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_002500.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_002500.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_002600.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_002600.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_002700.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_002700.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_002800.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_002800.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_002900.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_002900.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_003000.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_003000.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_003100.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_003100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_003200.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_003200.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_003300.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_003300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_003400.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_003400.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_003500.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_003500.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_003600.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_003600.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_003700.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_003700.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_003800.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_003800.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_003900.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_003900.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_004000.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_004000.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_004100.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_004100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_004200.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_004200.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_004300.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_004300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_004400.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_004400.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_004500.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_004500.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_004600.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_004600.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_004700.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_004700.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_004800.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_004800.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_004900.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_004900.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_005000.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_005000.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_005100.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_005100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_005200.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_005200.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_005300.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_005300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_005400.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_005400.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_005500.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_005500.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_005600.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_005600.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_005700.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_005700.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_005800.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_005800.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_005900.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_005900.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_000000.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_1_000000.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_000100.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_1_000100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_000200.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_1_000200.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_000300.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_1_000300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_000400.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_1_000400.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/output_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/untitled folder/blended_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/untitled folder/corrupted_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/untitled folder/original_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/deep/untitled folder/output_1.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -118,8 +41,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model/inpaint_vgg.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="86" selection-start-line="86" selection-end-line="86" />
+            <state relative-caret-position="515">
+              <caret line="85" column="43" selection-start-line="85" selection-start-column="43" selection-end-line="85" selection-end-column="43" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -155,7 +78,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>rando</find>
       <find>checkpoints</find>
       <find>posisson_blending</find>
       <find>end=</find>
@@ -185,6 +107,7 @@
       <find>print</find>
       <find>deep</find>
       <find>deep_c</find>
+      <find>get_VGG_features</find>
     </findStrings>
     <replaceStrings>
       <replace>.to(device)</replace>
@@ -316,12 +239,12 @@
       <workItem from="1569841019609" duration="16630000" />
       <workItem from="1570660449392" duration="137000" />
       <workItem from="1570690938994" duration="405000" />
-      <workItem from="1570693453686" duration="5182000" />
+      <workItem from="1570693453686" duration="5546000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47848000" />
+    <option name="totallyTimeSpent" value="48212000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="9" y="23" width="1355" height="843" extended-state="0" />
@@ -441,8 +364,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/inpaint_vgg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="86" selection-start-line="86" selection-end-line="86" />
+        <state relative-caret-position="515">
+          <caret line="85" column="43" selection-start-line="85" selection-start-column="43" selection-end-line="85" selection-end-column="43" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
