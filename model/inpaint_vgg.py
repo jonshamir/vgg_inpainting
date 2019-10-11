@@ -44,9 +44,7 @@ def calc_context_loss_deep(corrupt_images, gen_feats, masks, feats_masks):
     corrupt_feats = get_VGG_features(corrupt_images).detach()
     # feats_spatial_size = gen_feats.size()[-2:]
     # masks = nn.functional.interpolate(masks, size=feats_spatial_size) * feats_masks
-    # return torch.sum(torch.abs((corrupt_feats - gen_feats) * masks)) # L1
-    # return torch.sum(((corrupt_feats - gen_feats)**2) * masks) # L2
-    return nn.CosineSimilarity() # cosine
+    return torch.sum(torch.abs((corrupt_feats - gen_feats) * masks)) # L1
 
 
 
