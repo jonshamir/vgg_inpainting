@@ -44,7 +44,10 @@ def calc_context_loss_deep(corrupt_images, gen_feats, masks, feats_masks):
     corrupt_feats = get_VGG_features(corrupt_images).detach()
     # feats_spatial_size = gen_feats.size()[-2:]
     # masks = nn.functional.interpolate(masks, size=feats_spatial_size) * feats_masks
-    return torch.sum(torch.abs((corrupt_feats - gen_feats) * masks))
+    # return torch.sum(torch.abs((corrupt_feats - gen_feats) * masks)) # L1
+    # return torch.sum(((corrupt_feats - gen_feats)**2) * masks) # L2
+    return nn.CosineSimilarity() # cosine
+
 
 
 def inpaint(opt):
@@ -55,25 +58,32 @@ def inpaint(opt):
     # Loading trained GAN model
     saved_G = torch.load(opt.gan_path + opt.pretrained_model + "/modelG.pth")
     saved_D = torch.load(opt.gan_path + opt.pretrained_model + "/modelD.pth")
+    saved_E = torch.load(opt.gan_path + opt.pretrained_model + "/modelE.pth")
     saved_Inv = torch.load(opt.gan_path + opt.pretrained_model + "/modelInv.pth")
+
     netG = models.DeepGenerator().to(device)
     netD = models.DeepDiscriminator(vgg_layer=5, ndf=512).to(device)
+    netE = models.DeepEncoder().to(device)
     netInv = models.VGGInverterG().to(device)
+
     netG.load_state_dict(saved_G, strict=False)
     netD.load_state_dict(saved_D, strict=False)
+    netE.load_state_dict(saved_E, strict=False)
     netInv.load_state_dict(saved_Inv, strict=False)
 
     context_losses = []
-    deep_context_losses = []
     prior_losses = []
 
     for i, (corrupt_images, original_images, masks, weighted_masks, feats_masks) in enumerate(dataloader):
         corrupt_images, masks, weighted_masks, feats_masks = corrupt_images.to(device), masks.to(device), weighted_masks.to(device), feats_masks.to(device)
-        z = nn.Parameter(torch.FloatTensor(np.random.normal(0, 1, (corrupt_images.shape[0], opt.latent_dim,))).to(device))
-        inpaint_opt = optim.Adam([z])
-
+        # TEST WITHOUT HOLES
         corrupt_images = original_images.to(device)
         weighted_masks = 1
+
+        # z = nn.Parameter(torch.FloatTensor(np.random.normal(0, 1, (corrupt_images.shape[0], opt.latent_dim,))).to(device))
+        print("Getting initial noise from encoder...")
+        z = nn.Parameter(netE(corrupt_images).detach())
+        inpaint_opt = optim.Adam([z])
 
         print("Training input noise...")
         for epoch in range(opt.optim_steps):
@@ -81,13 +91,12 @@ def inpaint(opt):
             gen_feats = netG(z)
             gen_images = netInv(gen_feats)
 
-            context_loss = calc_context_loss(corrupt_images, gen_images, weighted_masks)
-            context_losses.append(context_loss.item())
-
             if opt.deep_context:
-                deep_context_loss = calc_context_loss_deep(corrupt_images, gen_feats, weighted_masks, feats_masks)
-                deep_context_losses.append(deep_context_loss.item())
-                context_loss += deep_context_loss
+                context_loss = calc_context_loss_deep(corrupt_images, gen_feats, weighted_masks, feats_masks)
+            else:
+                context_loss = calc_context_loss(corrupt_images, gen_images, weighted_masks)
+
+            context_losses.append(context_loss.item())
 
             prior_loss = torch.mean(netD(gen_feats)) * opt.prior_weight
             prior_losses.append(prior_loss.item())
@@ -99,8 +108,6 @@ def inpaint(opt):
 
             if epoch % 100 == 0:
                 epoch_str = str(epoch).zfill(6)
-                print(context_losses[-1])
-                print(deep_context_losses[-1])
                 print("Epoch: {}/{}\tLoss: {:.3f}\tContext loss: {:.3f}\tPrior loss: {:.3f}\r".format(1 + epoch, opt.optim_steps, inpaint_loss, context_loss, prior_loss))
                 save_image(gen_images, opt.out_dir + "out_{}_{}.png".format(i, epoch_str), normalize=True, range=(-1,1), nrow=5)
 
@@ -118,7 +125,6 @@ def inpaint(opt):
         plt.figure(figsize=(10, 5))
         plt.title("Loss During Training")
         plt.plot(context_losses, label="Img Context")
-        plt.plot(deep_context_losses, label="Feat Context")
         plt.plot(prior_losses, label="Prior (D)")
         plt.xlabel("iterations")
         plt.ylabel("Loss")

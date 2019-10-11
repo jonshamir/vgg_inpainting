@@ -2,7 +2,84 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f192069d-9cca-41ce-8b91-d60babadc125" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/pretrained_models/frogs_conv/modelE.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/inpaint_vgg.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/inpaint_vgg.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/models_big.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/models_big.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/blended_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/blended_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/corrupted_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/corrupted_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/loss.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/loss.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/original_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/original_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_000000.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_000000.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_000100.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_000100.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_000200.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_000200.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_000300.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_000300.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_000400.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_000400.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_000500.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_000500.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_000600.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_000600.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_000700.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_000700.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_000800.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_000800.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_000900.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_000900.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_001000.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_001000.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_001100.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_001100.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_001200.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_001200.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_001300.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_001300.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_001400.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_001400.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_001500.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_001500.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_001600.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_001600.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_001700.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_001700.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_001800.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_001800.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_001900.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_001900.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_002000.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_002000.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_002100.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_002100.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_002200.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_002200.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_002300.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_002300.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_002400.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_002400.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_002500.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_002500.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_002600.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_002600.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_002700.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_002700.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_002800.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_002800.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_002900.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_002900.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_003000.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_003000.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_003100.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_003100.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_003200.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_003200.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_003300.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_003300.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_003400.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_003400.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_003500.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_003500.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_003600.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_003600.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_003700.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_003700.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_003800.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_003800.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_003900.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_003900.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_004000.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_004000.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_004100.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_004100.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_004200.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_004200.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_004300.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_004300.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_004400.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_004400.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_004500.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_004500.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_004600.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_004600.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_004700.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_004700.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_004800.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_004800.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_004900.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_004900.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_005000.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_005000.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_005100.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_005100.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_005200.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_005200.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_005300.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_005300.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_005400.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_005400.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_005500.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_005500.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_005600.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_005600.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_005700.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_005700.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_005800.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_005800.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_0_005900.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_0_005900.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_000000.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_1_000000.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_000100.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_1_000100.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_000200.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_1_000200.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_000300.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_1_000300.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/out_1_000400.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/deep/out_1_000400.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/output_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/untitled folder/blended_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/untitled folder/corrupted_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/untitled folder/original_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/deep/untitled folder/output_1.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,20 +109,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/commands.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="3" column="238" selection-start-line="3" selection-start-column="238" selection-end-line="3" selection-end-column="238" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/datasets.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="76" column="32" selection-start-line="76" selection-start-column="32" selection-end-line="76" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="69">
+              <caret line="3" column="81" selection-start-line="3" selection-start-column="81" selection-end-line="3" selection-end-column="81" />
             </state>
           </provider>
         </entry>
@@ -53,8 +118,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model/inpaint_vgg.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
-              <caret line="120" column="36" selection-start-line="120" selection-start-column="36" selection-end-line="120" selection-end-column="36" />
+            <state relative-caret-position="412">
+              <caret line="86" selection-start-line="86" selection-end-line="86" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -65,8 +130,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/inpaint.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="575">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -74,8 +142,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/models_big.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1497">
-              <caret line="222" column="23" selection-start-line="222" selection-start-column="6" selection-end-line="222" selection-end-column="23" />
+            <state relative-caret-position="569">
+              <caret line="305" column="17" selection-start-line="305" selection-start-column="6" selection-end-line="305" selection-end-column="17" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -87,13 +155,10 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>img_size</find>
-      <find>rand</find>
       <find>rando</find>
       <find>checkpoints</find>
       <find>posisson_blending</find>
       <find>end=</find>
-      <find>print</find>
       <find>context_loss</find>
       <find>calc_context_loss</find>
       <find>check</find>
@@ -117,6 +182,9 @@
       <find>test</find>
       <find>DeepGenerator</find>
       <find>from_numpy</find>
+      <find>print</find>
+      <find>deep</find>
+      <find>deep_c</find>
     </findStrings>
     <replaceStrings>
       <replace>.to(device)</replace>
@@ -133,9 +201,10 @@
         <option value="$PROJECT_DIR$/model/train_gan.py" />
         <option value="$PROJECT_DIR$/model/inpaint.py" />
         <option value="$PROJECT_DIR$/model/models.py" />
-        <option value="$PROJECT_DIR$/model/models_big.py" />
         <option value="$PROJECT_DIR$/commands.txt" />
         <option value="$PROJECT_DIR$/model/datasets.py" />
+        <option value="$PROJECT_DIR$/model/train_encoder.py" />
+        <option value="$PROJECT_DIR$/model/models_big.py" />
         <option value="$PROJECT_DIR$/model/inpaint_vgg.py" />
       </list>
     </option>
@@ -152,7 +221,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -163,12 +231,29 @@
             <path>
               <item name="vgg_inpainting" type="b2602c69:ProjectViewProjectNode" />
               <item name="vgg_inpainting" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vgg_inpainting" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vgg_inpainting" type="462c0819:PsiDirectoryNode" />
+              <item name="pretrained_models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vgg_inpainting" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vgg_inpainting" type="462c0819:PsiDirectoryNode" />
+              <item name="pretrained_models" type="462c0819:PsiDirectoryNode" />
+              <item name="frogs_conv" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vgg_inpainting" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vgg_inpainting" type="462c0819:PsiDirectoryNode" />
               <item name="test_images" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -179,6 +264,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/model" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -190,6 +276,9 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/model" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/outputs/deep" />
       <recent name="$PROJECT_DIR$" />
@@ -224,21 +313,24 @@
       <workItem from="1568797762040" duration="9073000" />
       <workItem from="1569160673133" duration="386000" />
       <workItem from="1569310802009" duration="14419000" />
-      <workItem from="1569841019609" duration="16138000" />
+      <workItem from="1569841019609" duration="16630000" />
+      <workItem from="1570660449392" duration="137000" />
+      <workItem from="1570690938994" duration="405000" />
+      <workItem from="1570693453686" duration="5182000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41632000" />
+    <option name="totallyTimeSpent" value="47848000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="9" y="23" width="1355" height="843" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16222392" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16831683" />
       <window_info id="Structure" order="1" show_stripe_button="false" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" show_stripe_button="false" side_tool="true" />
-      <window_info id="Remote Host" order="3" sideWeight="0.8074074" weight="0.18413392" />
+      <window_info id="Remote Host" order="3" sideWeight="0.8074074" weight="0.18354912" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32756326" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.2509554" />
@@ -286,13 +378,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/train_gan.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="25" column="32" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
@@ -300,34 +385,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/models_big.py">
+    <entry file="file://$PROJECT_DIR$/model/datasets.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1497">
-          <caret line="222" column="23" selection-start-line="222" selection-start-column="6" selection-end-line="222" selection-end-column="23" />
+        <state relative-caret-position="1251">
+          <caret line="60" column="32" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="32" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/inpaint.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/commands.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="3" column="238" selection-start-line="3" selection-start-column="238" selection-end-line="3" selection-end-column="238" />
+        <state relative-caret-position="69">
+          <caret line="3" column="81" selection-start-line="3" selection-start-column="81" selection-end-line="3" selection-end-column="81" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/datasets.py">
+    <entry file="file://$PROJECT_DIR$/model/inpaint.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="76" column="32" selection-start-line="76" selection-start-column="32" selection-end-line="76" selection-end-column="32" />
+        <state relative-caret-position="575">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/train_gan.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="759">
+          <caret line="33" column="87" selection-start-line="33" selection-start-column="72" selection-end-line="33" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/train_encoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="43" column="15" selection-start-line="43" selection-start-column="15" selection-end-line="43" selection-end-column="15" />
+          <folding>
+            <element signature="e#1#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/models_big.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="569">
+          <caret line="305" column="17" selection-start-line="305" selection-start-column="6" selection-end-line="305" selection-end-column="17" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
@@ -336,8 +441,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/inpaint_vgg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="120" column="36" selection-start-line="120" selection-start-column="36" selection-end-line="120" selection-end-column="36" />
+        <state relative-caret-position="412">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
