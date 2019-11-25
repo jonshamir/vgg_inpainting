@@ -96,7 +96,7 @@ def inpaint(opt):
 
             context_losses.append(context_loss.item())
 
-            prior_loss = torch.mean(0) # torch.mean(netD(gen_feats)) * opt.prior_weight
+            prior_loss = context_loss * 0 # torch.mean(netD(gen_feats)) * opt.prior_weight
             prior_losses.append(prior_loss.item())
 
             inpaint_loss = context_loss + prior_loss
