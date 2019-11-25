@@ -41,13 +41,11 @@ def calc_context_loss(corrupt_images, gen_images, masks):
     # return torch.sum(((corrupt - generated)**2) * masks) # L2
     return torch.sum(torch.abs((corrupt_images - gen_images) * masks)) # L1
 
-def calc_context_loss_deep(corrupt_images, gen_feats, masks, feats_masks):
-    corrupt_feats = get_VGG_features(corrupt_images).detach()
+def calc_context_loss_deep(corrupt_images, gen_feats, masks, feats_masks, layer=5):
+    corrupt_feats = get_VGG_features(corrupt_images, layer=layer).detach()
     # feats_spatial_size = gen_feats.size()[-2:]
     # masks = nn.functional.interpolate(masks, size=feats_spatial_size) * feats_masks
     return torch.sum(torch.abs((corrupt_feats - gen_feats) * masks)) # L1
-
-
 
 def inpaint(opt):
     data_path = opt.test_dir + opt.dataset + '/'
@@ -81,7 +79,7 @@ def inpaint(opt):
 
         # z = nn.Parameter(torch.FloatTensor(np.random.normal(0, 1, (corrupt_images.shape[0], opt.latent_dim,))).to(device))
         print("Getting initial noise from encoder...")
-        corrupt_feats = get_VGG_features(corrupt_images).detach()
+        corrupt_feats = get_VGG_features(corrupt_images, layer=opt.feat_layer).detach()
         z = nn.Parameter(netE(corrupt_feats).detach())
         inpaint_opt = optim.Adam([z])
 
@@ -92,7 +90,7 @@ def inpaint(opt):
             gen_images = netInv(gen_feats)
 
             if opt.deep_context:
-                context_loss = calc_context_loss_deep(corrupt_images, gen_feats, weighted_masks, feats_masks)
+                context_loss = calc_context_loss_deep(corrupt_images, gen_feats, weighted_masks, feats_masks, layer=opt.feat_layer)
             else:
                 context_loss = calc_context_loss(corrupt_images, gen_images, weighted_masks)
 
