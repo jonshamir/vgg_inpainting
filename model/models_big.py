@@ -2,6 +2,9 @@ import torch
 import torch.nn as nn
 import math
 
+VGG_NUM_CHANNELS = [3, 64, 128, 256, 512, 512]
+VGG_SIZES = [224, 224, 112, 56, 28, 14]
+
 class View(nn.Module):
     def __init__(self, *shape):
         super(View, self).__init__()
@@ -12,35 +15,37 @@ class View(nn.Module):
         return input.view(*self.shape)
 
 class VGGInverterG(nn.Module):
-    def __init__(self, nc=3):
+    def __init__(self, layer=5):
         super(VGGInverterG, self).__init__()
-        self.conv = nn.Sequential(
-            # 14 -> 14
-            nn.Conv2d(512, 512, 3, stride=1, padding=1),
-            nn.BatchNorm2d(512),
+        nf = VGG_NUM_CHANNELS[layer] # number of feature channels
+
+        model = [
+            nn.Conv2d(nf, nf, 3, stride=1, padding=1),
+            nn.BatchNorm2d(nf),
             nn.LeakyReLU(0.2, True),
-            nn.Conv2d(512, 512, 3, stride=1, padding=1),
-            nn.BatchNorm2d(512),
+            nn.Conv2d(nf, nf, 3, stride=1, padding=1),
+            nn.BatchNorm2d(nf),
             nn.LeakyReLU(0.2, True),
-            nn.Conv2d(512, 512, 3, stride=1, padding=1),
-            nn.BatchNorm2d(512),
-            nn.LeakyReLU(0.2, True),
-            # 14 -> 28
-            nn.ConvTranspose2d(512, 256, 4, stride=2, padding=1, bias=False),
-            nn.BatchNorm2d(256),
-            nn.LeakyReLU(0.2, True),
-            # 28 -> 56
-            nn.ConvTranspose2d(256, 128, 4, stride=2, padding=1, bias=False),
-            nn.BatchNorm2d(128),
-            nn.LeakyReLU(0.2, True),
-            # 56 -> 112
-            nn.ConvTranspose2d(128, 64, 4, stride=2, padding=1, bias=False),
-            nn.BatchNorm2d(64),
-            nn.LeakyReLU(0.2, True),
-            # 112 -> 224
-            nn.ConvTranspose2d(64, nc, 4, stride=2, padding=1, bias=False),
-            nn.Tanh(),
-        )
+            nn.Conv2d(nf, nf, 3, stride=1, padding=1),
+            nn.BatchNorm2d(nf),
+            nn.LeakyReLU(0.2, True)
+        ]
+
+        for _ in range(layer - 2):
+            nf //= 2
+            model += [
+                nn.ConvTranspose2d(2 * nf, nf, 4, stride=2, padding=1, bias=False),
+                nn.BatchNorm2d(nf),
+                nn.LeakyReLU(0.2, True)
+            ]
+
+        if (layer > 1):
+            model += [nn.ConvTranspose2d(nf, 3, 4, stride=2, padding=1, bias=False)]
+        else:
+            model += [nn.Conv2d(nf, 3, 3, stride=1, padding=1)]
+        model += [nn.Tanh()]
+
+        self.conv = nn.Sequential(*model)
 
     def forward(self, input):
         # input: (N, 100)
@@ -173,46 +178,39 @@ class BasicDiscriminator(nn.Module):
 
 class DeepGenerator(nn.Module):
     # initializers
-    def __init__(self, d=128):
+    def __init__(self, nz=128, layer=5):
         super(DeepGenerator, self).__init__()
+        final_nf = VGG_NUM_CHANNELS[layer] # number of feature channels
+        nf = nz
+        num_layers = 8
+
         self.fc = nn.Sequential(
-            View(-1, 128),
-            nn.Linear(128, 128),
-            View(-1, 128, 1, 1)
+            View(-1, nz),
+            nn.Linear(nz, nf),
+            View(-1, nf, 1, 1)
         )
 
-        self.conv = nn.Sequential(
-            nn.Conv2d(128, d, 3, 1, 1),
-            nn.BatchNorm2d(d),
-            nn.LeakyReLU(0.2),
+        model = []
 
-            nn.Upsample(scale_factor=2),
-            nn.Conv2d(d, 2*d, 3, 1, 1),
-            nn.BatchNorm2d(2*d),
-            nn.LeakyReLU(0.2),
+        for i in range(num_layers):
+            if i < num_layers - layer + 1:
+                model += [nn.Upsample(scale_factor=2)]
 
-            nn.Upsample(scale_factor=2),
-            nn.Conv2d(2*d, 4*d, 3, 1, 1),
-            nn.BatchNorm2d(4*d),
-            nn.LeakyReLU(0.2),
+            if i == 3: # when spatial dimention is 16 make it 14 to fit with VGG sizes
+                model += [nn.Conv2d(nf, nf, 3, 1, 0)]
+            elif i > num_layers - 4:
+                nf *= 2
+                model += [nn.Conv2d(nf // 2, nf, 3, 1, 1)]
+            else:
+                model += [nn.Conv2d(nf, nf, 3, 1, 1)]
 
-            nn.Upsample(scale_factor=2),
-            nn.Conv2d(4*d, 4*d, 3, 1, 1),
-            nn.BatchNorm2d(4*d),
-            nn.LeakyReLU(0.2),
+            model += [
+                nn.BatchNorm2d(nf),
+                nn.LeakyReLU(0.2)
+            ]
 
-            nn.Upsample(scale_factor=2),
-            nn.Conv2d(4*d, 4*d, 3, 1, 1),
-            nn.BatchNorm2d(4*d),
-            nn.LeakyReLU(0.2),
-
-            nn.Conv2d(4*d, 8*d, 3, 1, 1),
-            nn.BatchNorm2d(8*d),
-            nn.LeakyReLU(0.2),
-
-            nn.Conv2d(8*d, 512, 3, 1, 0)
-        )
-        self.relu = nn.ReLU()
+        model += [nn.Conv2d(nf, final_nf, 1, 1, 0)]
+        self.conv = nn.Sequential(*model)
 
     def forward(self, input):
         out = self.fc(input)
@@ -222,53 +220,53 @@ class DeepGenerator(nn.Module):
 
 class DeepDiscriminator(nn.Module):
     # initializers
-    def __init__(self, vgg_layer=5, ndf=128):
+    def __init__(self, layer=5):
         super(DeepDiscriminator, self).__init__()
-        gen_all_ch = [3, 64, 128, 256, 512, 512]
-        gen_ch = gen_all_ch[vgg_layer]
-        feature_size = 224 // (2 ** (vgg_layer - 1))
-        num_layers = math.ceil(math.sqrt(feature_size))
-        num_strided_layers = num_layers - 2
-        use_bias = True
+        gen_ch = VGG_NUM_CHANNELS[layer]
+        feature_size = 224 // (2**(layer - 1))
+        num_layers = 8
+        num_strided_layers = num_layers - layer
 
         model = []
 
         in_ch = gen_ch
-        out_ch = ndf
+        out_ch = in_ch
+
+        if layer == 0:
+            out_ch = 64
+            num_strided_layers = num_layers - 1
+
         model += [nn.Conv2d(in_ch, out_ch, kernel_size=3, stride=1, padding=1, bias=True)]
         model += [nn.LeakyReLU(0.2, True)]
 
-        for i in range(2 * num_strided_layers - 1):
+        for i in range(num_strided_layers):
             in_ch = out_ch
             out_ch = min(in_ch * 2, 512)
-            stride = 2 if ((i % 2) == 0) else 1
-            model += [nn.Conv2d(in_ch, out_ch, kernel_size=3, stride=stride, padding=1, bias=use_bias)]
-            # model += [norm_layer(out_ch)]
+            model += [nn.Conv2d(in_ch, out_ch, kernel_size=3, stride=2, padding=1)]
             model += [nn.LeakyReLU(0.2, True)]
 
-        for i in range(num_layers):
+        for _ in range(num_layers - num_strided_layers):
             in_ch = out_ch
             out_ch = max(in_ch // 2, 128)
-            model += [nn.Conv2d(in_ch, out_ch , kernel_size=3, stride=1, padding=1, bias=use_bias)]
+            model += [nn.Conv2d(in_ch, out_ch , kernel_size=3, stride=1, padding=1)]
             model += [nn.LeakyReLU(0.2, True)]
-            model += [nn.Conv2d(out_ch, out_ch , kernel_size=3, stride=1, padding=1, bias=use_bias)]
-            # model += [norm_layer(out_ch)]
-            model += [nn.LeakyReLU(0.2, True)]
+
+        self.model = nn.Sequential(*model)
 
         self.layer_size = 4 * 4 * out_ch
 
-        self.model = nn.Sequential(*model)
-        fc = [nn.Linear(self.layer_size, ndf)]
-        fc += [nn.Linear(ndf, 1)]
-
-        self.fc = nn.Sequential(*fc)
+        self.fc = nn.Sequential(
+            nn.Linear(self.layer_size, 128),
+            nn.Linear(128, 1)
+        )
 
     # forward method
     def forward(self, input):
         l1 = self.model(input)
-        output = self.fc(l1.view(-1, self.layer_size ))
+        output = self.fc(l1.view(-1, self.layer_size))
 
         return output
+
 
 def calc_gradient_penalty(netD, real_data, fake_data, device, type='mixed', constant=1.0, lambda_gp=10.0):
     """Calculate the gradient penalty loss, used in WGAN-GP paper https://arxiv.org/abs/1704.00028
@@ -302,24 +300,30 @@ def calc_gradient_penalty(netD, real_data, fake_data, device, type='mixed', cons
     else:
         return 0.0, None
 
-
 class DeepEncoder(nn.Module):
-    def __init__(self, nc=512):
+    def __init__(self, layer=5):
         super(DeepEncoder, self).__init__()
-        self.conv = nn.Sequential(
-            # 14 -> 14
-            nn.Conv2d(nc, 256, 3, stride=1, padding=1),
-            nn.LeakyReLU(0.2, True),
-            # 14 -> 7
-            nn.Conv2d(256, 128, 3, stride=2, padding=1),
-            nn.LeakyReLU(0.2, True),
-            # 7 -> 7
-            nn.Conv2d(128, 64, 3, stride=1, padding=1),
-            nn.LeakyReLU(0.2, True)
-        )
+        nf = VGG_NUM_CHANNELS[layer] # number of feature channels
+        spatial_size = VGG_SIZES[layer]
+
+        model = []
+
+        for i in range(4):
+            if spatial_size > 7:
+                spatial_size //= 2
+                model += [nn.Conv2d(nf, nf // 2, 4, stride=2, padding=1)]
+            else:
+                model += [nn.Conv2d(nf, nf // 2, 3, stride=1, padding=1)]
+
+            nf //= 2
+            model += [nn.LeakyReLU(0.2, True)]
+
+        self.conv = nn.Sequential(*model)
+
+        out_size = nf * spatial_size * spatial_size
 
         self.fc = nn.Sequential(
-            nn.Linear(64 * 7 * 7, 512),
+            nn.Linear(out_size, 512),
             nn.LeakyReLU(0.2, True),
             nn.Linear(512, 128)
         )

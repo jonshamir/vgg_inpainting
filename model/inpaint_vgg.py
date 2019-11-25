@@ -59,10 +59,10 @@ def inpaint(opt):
     saved_E = torch.load(opt.gan_path + opt.pretrained_model + "/modelE.pth")
     saved_Inv = torch.load(opt.gan_path + opt.pretrained_model + "/modelInv.pth")
 
-    netG = models.DeepGenerator().to(device)
-    netD = models.DeepDiscriminator(vgg_layer=5, ndf=512).to(device)
-    netE = models.DeepEncoder().to(device)
-    netInv = models.VGGInverterG().to(device)
+    netG = models.DeepGenerator(layer=opt.feat_layer).to(device)
+    netD = models.DeepDiscriminator(layer=opt.feat_layer).to(device)
+    netE = models.DeepEncoder(layer=opt.feat_layer).to(device)
+    netInv = models.VGGInverterG(layer=opt.feat_layer).to(device)
 
     netG.load_state_dict(saved_G, strict=False)
     netD.load_state_dict(saved_D, strict=False)
