@@ -3,25 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f192069d-9cca-41ce-8b91-d60babadc125" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands.txt" beforeDir="false" afterPath="$PROJECT_DIR$/commands.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/inpaint_vgg.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/inpaint_vgg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/models_big.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/models_big.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pretrained_models/frogs_conv/latest_net_E.pth" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pretrained_models/frogs_conv/modelD.pth" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pretrained_models/frogs_conv/modelE.pth" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pretrained_models/frogs_conv/modelG.pth" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pretrained_models/frogs_conv/modelInv.pth" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pretrained_models/frogs_conv3/modelD.pth" beforeDir="false" afterPath="$PROJECT_DIR$/pretrained_models/frogs_conv3/modelD.pth" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pretrained_models/frogs_conv3/modelE.pth" beforeDir="false" afterPath="$PROJECT_DIR$/pretrained_models/frogs_conv3/modelE.pth" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pretrained_models/frogs_conv3/modelG.pth" beforeDir="false" afterPath="$PROJECT_DIR$/pretrained_models/frogs_conv3/modelG.pth" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pretrained_models/frogs_conv4/modelD.pth" beforeDir="false" afterPath="$PROJECT_DIR$/pretrained_models/frogs_conv4/modelD.pth" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pretrained_models/frogs_conv4/modelE.pth" beforeDir="false" afterPath="$PROJECT_DIR$/pretrained_models/frogs_conv4/modelE.pth" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pretrained_models/frogs_conv4/modelG.pth" beforeDir="false" afterPath="$PROJECT_DIR$/pretrained_models/frogs_conv4/modelG.pth" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pretrained_models/frogs_conv5/modelD.pth" beforeDir="false" afterPath="$PROJECT_DIR$/pretrained_models/frogs_conv5/modelD.pth" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pretrained_models/frogs_conv5/modelE.pth" beforeDir="false" afterPath="$PROJECT_DIR$/pretrained_models/frogs_conv5/modelE.pth" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pretrained_models/frogs_conv5/modelG.pth" beforeDir="false" afterPath="$PROJECT_DIR$/pretrained_models/frogs_conv5/modelG.pth" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pretrained_models/zebras_conv/modelInv.pth" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pretrained_models/zebras_relu/modelInv.pth" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +30,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/commands.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="69">
@@ -57,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model/inpaint_vgg.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2">
-              <caret line="30" column="42" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
+            <state relative-caret-position="23">
+              <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -143,8 +125,8 @@
         <option value="$PROJECT_DIR$/model/datasets.py" />
         <option value="$PROJECT_DIR$/model/train_encoder.py" />
         <option value="$PROJECT_DIR$/model/models_big.py" />
-        <option value="$PROJECT_DIR$/model/inpaint_vgg.py" />
         <option value="$PROJECT_DIR$/commands.txt" />
+        <option value="$PROJECT_DIR$/model/inpaint_vgg.py" />
       </list>
     </option>
   </component>
@@ -257,12 +239,12 @@
       <workItem from="1572809513967" duration="329000" />
       <workItem from="1573458728489" duration="590000" />
       <workItem from="1574597239363" duration="693000" />
-      <workItem from="1574696356728" duration="347000" />
+      <workItem from="1574696356728" duration="469000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54789000" />
+    <option name="totallyTimeSpent" value="54911000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="85" y="23" width="1355" height="843" extended-state="0" />
@@ -364,20 +346,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/inpaint_vgg.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2">
-          <caret line="30" column="42" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/commands.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
           <caret line="3" column="158" lean-forward="true" selection-start-line="3" selection-start-column="158" selection-end-line="3" selection-end-column="158" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/inpaint_vgg.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
